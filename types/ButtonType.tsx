@@ -7,9 +7,9 @@ export interface ButtonType {
     extraStyle?:string
 }
 
-export interface HeaderActionsType {
+export interface ActionsButtonType {
     icon: ReactNode,
     id: number,
-    count: number,
+    count?: number,
     to: string
 }

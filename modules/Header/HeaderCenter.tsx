@@ -4,7 +4,7 @@ import HeaderForm from '@/components/HeaderForm'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import HeaderActions from './component/HeaderActions'
+import HeaderActions from '../../components/Actions'
 
 function HeaderCenter() {
     const buttons = [{ id: 1, icon: <CompareIcon />, count: 7, to: '/compare' },{ id: 2, icon: <HeartOutlineIcon />, count: 11, to: '/liked' }, { id: 3, icon: <CartIcon />, count: 7, to: '/cart' },{ id: 4, icon: <UserIcon />, count: 0, to: '/profile' }]
