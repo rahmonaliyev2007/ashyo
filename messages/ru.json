@@ -1,11 +1,12 @@
 {
-    "HeaderTop": {
-      "address": "Ташкент",
-      "aboutUs": "О нас",
-      "contact": "Контакт",
-      "products": "Продукты"
-    },
-    "HeaderCenter":{
-        "categoryBtn" : "Категории"
-    }
-  }
+  "HeaderTop": {
+    "address": "Ташкент",
+    "aboutUs": "О нас",
+    "contact": "Контакты",
+    "products": "Продукты"
+  },
+  "HeaderCenter": {
+    "categoryBtn": "Категории"
+  },
+  "moreBtn": "Подробнее"
+}

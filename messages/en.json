@@ -1,11 +1,12 @@
 {
-    "HeaderTop": {
-      "address": "Tahskent",
-      "aboutUs": "About Us",
-      "contact": "Contacts",
-      "products": "Products"
-    },
-    "HeaderCenter":{
-        "categoryBtn" : "Categories"
-    }
-  }
+  "HeaderTop": {
+    "address": "Tashkent",
+    "aboutUs": "About Us",
+    "contact": "Contact",
+    "products": "Products"
+  },
+  "HeaderCenter": {
+    "categoryBtn": "Categories"
+  },
+  "moreBtn": "Read More"
+}
