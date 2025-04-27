@@ -13,12 +13,12 @@ function Brands() {
     return (
         <div className="max-w-[1240px] custom-grid m-auto mt-[100px]">
             {brands.map((brand: BrandsType) => (
-                <Link href="/" key={brand.id} className={`grid-item-${brand.id} hover:opacity-60 transition`}>
+                <Link href="/" key={brand.id} className={`grid-item-${brand.id} hover:opacity-60 duration-300`}>
                     <img src={`${API}/uploads/${brand.image}`} alt={brand.name} />
                 </Link>
             ))}
-            <div className="grid-item-8">
-                <button className="cst-button block !max-w-[220px] !px-[5.625rem] rounded-lg bg-[#EBEFF3] text-[#134E9B] transition">
+            <div className="grid-item-8 duration-300">
+                <button className=" text-[#134E9B]">
                     Ko'proq
                 </button>
             </div>
