@@ -1,0 +1,117 @@
+.custom-grid {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 18%;
+    width: 100%;
+    gap: 10px;
+    justify-content: center;
+    grid-template-rows: repeat(5, 50px);
+    grid-template-areas:
+        'artel samsung nokia mi'
+        'artel samsung nokia mi'
+        'apple samsung huawei mi'
+        'apple vivo huawei mi'
+        'apple vivo huawei koproq'
+    ;
+}
+
+.grid-item-1 {
+    grid-area: artel;
+    justify-self: center;
+    border-radius: 6px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: #67B43733;
+}
+
+.grid-item-2 {
+    grid-area: samsung;
+    justify-self: center;
+    background-color: #034EA21A;
+    border-radius: 6px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.grid-item-3 {
+    grid-area: nokia;
+    justify-self: center;
+    background-color: #00439C1F;
+    border-radius: 6px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.grid-item-4 {
+    grid-area: mi;
+    justify-self: start;
+    background-color: #FF670033;
+    border-radius: 6px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+}
+
+.grid-item-5 {
+    grid-area: apple;
+    justify-self: center;
+    background-color: #0000001A;
+    border-radius: 6px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+}
+
+.grid-item-6 {
+    grid-area: vivo;
+    justify-self: center;
+    background-color: #006DB833;
+    border-radius: 6px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.grid-item-7 {
+    grid-area: huawei;
+    align-self: center;
+    background-color: #FF1A1F33;
+    border-radius: 6px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    justify-self: center;
+}
+
+.grid-item-8 {
+    grid-area: koproq;
+    justify-self: center;
+    background-color: #EBEFF3;
+    border-radius: 6px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    &:hover{
+        background-color: #c6dff8;
+    }
+}
