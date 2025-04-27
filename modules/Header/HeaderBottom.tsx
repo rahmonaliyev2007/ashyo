@@ -9,7 +9,7 @@ function HeaderBottom() {
   console.log(categories);
   
   return (
-    <div className='containers flex justify-between items-center text-[#545D6A] gap-2 flex-wrap'>
+    <div className='containers flex justify-between items-center text-[#545D6A] gap-2 flex-wrap '>
       {categories?.map((category:HeaderCategoriesType)=><Link className='hover:text-[#134E9B] duration-500' key={category.id} href={'/'}>{category.name}</Link>)}
     </div>
   )

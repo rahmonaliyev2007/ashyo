@@ -4,5 +4,8 @@
       "aboutUs": "About Us",
       "contact": "Contacts",
       "products": "Products"
+    },
+    "HeaderCenter":{
+        "categoryBtn" : "Categories"
     }
   }

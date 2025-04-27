@@ -16,7 +16,7 @@ function HeaderTop() {
     return (cookieLang === 'ru' || cookieLang === 'en' || cookieLang === 'uz') ? cookieLang : 'uz';
   });
   return (
-    <div className='text-sm py-[10px] bg-[#EBEFF3]'>
+    <div className='text-sm py-[10px] bg-[#EBEFF3] relative z-[1]'>
       <div className='containers flex justify-between items-center'>
         <nav className='flex items-center gap-[28px]'>
           <Link href={'/location'} className='flex items-center gap-[10px] hover:text-[#134E9B] duration-300 text-[#545D6A]'><LocationIcon /> <span>{t('address')}</span></Link>
@@ -30,7 +30,7 @@ function HeaderTop() {
             <SelectTrigger className="w-[70px] shadow-none border-none">
               <SelectValue defaultValue={lang} placeholder="Select a language" />
             </SelectTrigger>
-            <SelectContent>
+            <SelectContent className='relative z-50 bg-white border-none shadow-lg'>
               <SelectGroup>
                 <SelectItem value="uz">uz</SelectItem>
                 <SelectItem value="ru">ru</SelectItem>

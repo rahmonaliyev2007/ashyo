@@ -4,5 +4,8 @@
       "aboutUs": "О нас",
       "contact": "Контакт",
       "products": "Продукты"
+    },
+    "HeaderCenter":{
+        "categoryBtn" : "Категории"
     }
   }

@@ -4,5 +4,8 @@
       "aboutUs": "Biz haqimizda",
       "contact": "Aloqa",
       "products": "Mahsulotlar"
+    },
+    "HeaderCenter":{
+        "categoryBtn" : "Kategoriyalar"
     }
   }
