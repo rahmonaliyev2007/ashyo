@@ -35,9 +35,9 @@ const HeaderForm = () => {
     }, [debouncedValue]);
 
     return (
-        <div className="flex items-start gap-[10px] relative">
+        <div className="flex items-center gap-[10px] relative">
             <Button onClick={() => setShowCategory(!showCategory)} title={t('categoryBtn')} icon={<ArrowDownIcon className={`${showCategory ? "rotate-180" : "rotate-0"} duration-500`} />} iconPosition="right" />
-            <div className="w-[520px] relative bg-[#EBEFF3] rounded-[6px]">
+            <div className="xl:w-[520px] w-full relative bg-[#EBEFF3] rounded-[6px]">
                 <HeaderInput value={searchValue} onChange={(e) => setSearchValue(e.target.value)} placeholder="What are you looking for?" type="text" extraStyle="w-full !pr-[65px] z-[30] relative" onFocus={handleFocus} onBlur={handleBlur} />
                 <Button icon={<SearchIcon />} iconPosition="left" extraStyle="!p-0 w-[60px] absolute top-0 right-0 h-full max-h-[64px] z-[50]" />
                 <div className={`w-full absolute rounded-b-[6px] bg-[#EBEFF3] z-[11] left-0 ${isOpenSearchModal && isLoading || searchData?.length ? 'max-h-[300px] pt-[10px] overflow-y-scroll shadow-lg top-[90%]' : 'h-[0px] pt-[0px] overflow-hidden top-[50%]'} duration-500 bg-[#EBEFF3]`}>

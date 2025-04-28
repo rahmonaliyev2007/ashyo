@@ -6,6 +6,7 @@ import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import { CotegoryContext } from "@/context/Context";
 import { Layout } from "@/features";
+import { ThemeProvider } from "@/context/ThemeProvider";
 
 export const metadata: Metadata = {
   title: "Ashyo - Online Store",
@@ -32,9 +33,11 @@ export default async function LocaleLayout({
       <body>
         <NextIntlClientProvider>
           <QueryProvider>
-            <CotegoryContext>
-              <Layout>{children}</Layout>
-            </CotegoryContext>
+            <ThemeProvider>
+              <CotegoryContext>
+                <Layout>{children}</Layout>
+              </CotegoryContext>
+            </ThemeProvider>
           </QueryProvider>
         </NextIntlClientProvider>
       </body>

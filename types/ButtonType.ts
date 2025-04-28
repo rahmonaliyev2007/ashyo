@@ -12,5 +12,8 @@ export interface ActionsButtonType {
     icon: ReactNode,
     id: number,
     count?: number,
-    to: string
+    to: string,
+    extraStyle?:string
+    title?:string
+
 }

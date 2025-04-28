@@ -3,10 +3,14 @@
     "address": "Ташкент",
     "aboutUs": "О нас",
     "contact": "Контакты",
-    "products": "Продукты"
+    "products": "Товары"
   },
   "HeaderCenter": {
-    "categoryBtn": "Категории"
+    "categoryBtn": "Категории",
+    "compare": "Сравнить",
+    "wishlist": "Список желаний",
+    "cart": "Корзина",
+    "profile": "Профиль"
   },
-  "moreBtn": "Подробнее"
+  "moreBtn": "Читать далее"
 }

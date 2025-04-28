@@ -6,7 +6,11 @@
     "products": "Products"
   },
   "HeaderCenter": {
-    "categoryBtn": "Categories"
+    "categoryBtn": "Categories",
+    "compare": "Compare",
+    "wishlist": "Wishlist",
+    "cart" : "Cart",
+    "profile": "Profile"
   },
   "moreBtn": "Read More"
 }

@@ -1,13 +1,16 @@
 {
-    "HeaderTop": {
-      "address": "Toshkent",
-      "aboutUs": "Biz haqimizda",
-      "contact": "Aloqa",
-      "products": "Mahsulotlar"
-    },
-    "HeaderCenter":{
-        "categoryBtn" : "Kategoriyalar"
-    },
-    "moreBtn": "Batafsil"
-    
-  }
+  "HeaderTop": {
+    "address": "Toshkent",
+    "aboutUs": "Biz haqimizda",
+    "contact": "Aloqa",
+    "products": "Mahsulotlar"
+  },
+  "HeaderCenter": {
+    "categoryBtn": "Kategoriyalar",
+    "compare": "Taqqoslash",
+    "wishlist": "Istaklar ro'yxati",
+    "cart": "Savatcha",
+    "profile": "Profil"
+  },
+  "moreBtn": "Batafsil o'qish"
+}
