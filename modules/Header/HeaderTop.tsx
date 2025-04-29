@@ -47,5 +47,4 @@ function HeaderTop() {
     </div>
   )
 }
-
 export default HeaderTop
