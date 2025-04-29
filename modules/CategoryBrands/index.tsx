@@ -19,6 +19,7 @@ function CategoryBrands() {
                 </>
                 }
                 <img src={`${API}/uploads/${brandCategory?.image}`} alt="brand category image" />
+                <span className='absolute top-3 left-3 text-white px-4 py-1 rounded-[30px] !z-40 border text-xs'>{brandCategory.name}</span>
             </div>
         ))}
         <button className='brandCategory-7'>Ko'proq</button>
