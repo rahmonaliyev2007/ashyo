@@ -11,7 +11,6 @@ import { ThemeContext } from '@/context/ThemeProvider';
 
 function Products({ title , api }: { title: string , api:string}) {
     const { data: products, isLoading, isError } = getProducts(api);
-    console.log(products);
     const {theme} = useContext(ThemeContext)
     if (isLoading || isError) {
         return (
