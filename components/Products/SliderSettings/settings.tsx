@@ -23,6 +23,21 @@ export const settings = {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 4000,
-    nextArrow: <NextArrow />, 
+    nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
-};
+    responsive: [
+      {
+        breakpoint: 1220,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+      {
+        breakpoint: 900, 
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+    ],
+  };
+  

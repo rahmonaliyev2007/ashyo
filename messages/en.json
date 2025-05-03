@@ -9,8 +9,57 @@
     "categoryBtn": "Categories",
     "compare": "Compare",
     "wishlist": "Wishlist",
-    "cart" : "Cart",
-    "profile": "Profile"
+    "cart": "Cart",
+    "profile": "Profile",
+    "placeholder": "What are you looking for?"
   },
-  "moreBtn": "Read More"
+  "moreBtn": "Read more",
+  "mostPopularProducts": "Most Popular Products",
+  "AboutUs": {
+    "about": {
+      "title": "About Ashyo",
+      "main": "Home",
+      "des": "Ashyo was founded in 2022 in Tashkent city."
+    },
+    "nasiya": {
+      "title": "Installment Plan",
+      "des": "Ashyo offers a convenient online payment plan for all electronics and home appliances."
+    },
+    "paymentMethods": {
+      "title": "Payment Methods",
+      "des": "Pay in a way that's convenient for you: in-store, via Click or Payme."
+    },
+    "delivery": {
+      "title": "Delivery",
+      "des": "Delivery terms and conditions for Ashyo products."
+    },
+    "garranty": {
+      "title": "Product Warranty",
+      "des": "Learn everything about warranty and returns at Ashyo online store."
+    },
+    "help": {
+      "title": "Help",
+      "des": "If you don’t understand something, feel free to ask your questions."
+    },
+    "productsTitle": "Recently Viewed Products",
+    "des1": "Ashyo offers market-priced household appliances and electronics. For over 2 years, we have provided customers with a wide assortment of products and reliable service.",
+    "des2": "Ashyo was established in 2022 in Tashkent. Today, we operate 26 stores across the capital and regions.",
+    "des3": "You can purchase goods in any convenient way: in our retail stores or on the website. An online payment plan is available for household appliances. A passport is required for registration.",
+    "des4": "Legal entities can make purchases via bank transfer without any extra fees."
+  },
+  "Footer": {
+    "downloadApp": "Download the mobile app",
+    "contact": "Contact",
+    "social": "Follow us on social media",
+    "anyQuestion": "Got a question?",
+    "questionPlaceholder": "Ask any question you're interested in",
+    "footerLinks": {
+      "menu": "Menu",
+      "1": "About Ashyo",
+      "2": "Terms of Use",
+      "3": "Privacy and Security Policy",
+      "4": "Product Return Policy",
+      "5": "Contact Us"
+    }
+  }
 }
