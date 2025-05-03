@@ -5,13 +5,22 @@ import HeaderActions from '../../components/Actions'
 import { CartIcon, CompareIcon, HeartOutlineIcon, MenuIcon, UserIcon } from '@/assets/icons'
 import Modal from '@/components/Modal'
 import Auth from '../Auth'
+import { getCookie } from 'cookies-next'
+import { useRouter } from '@/i18n/navigation'
 
 function HeaderActionButtons() {
     const [isOpen, setIsOpen] = useState<boolean>(false);
     const t = useTranslations('HeaderCenter')
     const [isModalOpen, setIsModalOpen] = useState<boolean>(false)
-    const buttons = [{ id: 1, title: t('compare'), icon: <CompareIcon />, count: 7, to: '/compare' }, { id: 2, title: t('wishlist'), icon: <HeartOutlineIcon />, count: 11, to: '/liked' }, { id: 3, title: t('cart'), icon: <CartIcon />, count: 7, to: '/cart' }, { id: 4, title: t('profile'), icon: <UserIcon />, count: 0, to: '/profile', onClick: ()=> {setIsModalOpen(true); console.log('salom')}
-     }]
+    const router = useRouter();
+    const handleGoProfile = ()=>{
+       const token = getCookie('NEXT_TOKEN') || null
+       if(token)router.push('pages/profile')
+        else setIsModalOpen(true)
+
+   }
+    
+    const buttons = [{ id: 1, title: t('compare'), icon: <CompareIcon />, count: 7, to: '/compare' }, { id: 2, title: t('wishlist'), icon: <HeartOutlineIcon />, count: 11, to: '/liked' }, { id: 3, title: t('cart'), icon: <CartIcon />, count: 7, to: '/cart' }, { id: 4, title: t('profile'), icon: <UserIcon />, count: 0, to: '/profile', onClick:handleGoProfile}]
 
     return (
         <>
