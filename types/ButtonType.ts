@@ -15,5 +15,5 @@ export interface ActionsButtonType {
     to: string,
     extraStyle?:string
     title?:string
-
+    onClick?: MouseEventHandler<HTMLButtonElement> 
 }

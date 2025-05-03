@@ -5,6 +5,7 @@ export interface HeaderInputType {
     type: 'text' | 'password' | 'number' | "tel",
     extraStyle?: string
     value?: string | number
+    name? : string
     onChange?:ChangeEventHandler<HTMLInputElement>
     onFocus?: FocusEventHandler<HTMLInputElement>;  
     onBlur?: FocusEventHandler<HTMLInputElement>; 
