@@ -7,7 +7,7 @@ import { routing } from '@/i18n/routing';
 import { CotegoryContext } from "@/context/Context";
 import { Layout } from "@/features";
 import { ThemeProvider } from "@/context/ThemeProvider";
-
+import { Toaster } from 'react-hot-toast';
 export const metadata: Metadata = {
   title: "Ashyo - Online Store",
   description: "An e-commerce platform for unique products",
@@ -35,6 +35,7 @@ export default async function LocaleLayout({
           <QueryProvider>
             <ThemeProvider>
               <CotegoryContext>
+                <Toaster position="top-right" />
                 <Layout>{children}</Layout>
               </CotegoryContext>
             </ThemeProvider>

@@ -10,10 +10,10 @@ import { ShoppingBag} from 'lucide-react'
 import { useRouter } from '@/i18n/navigation'
 
 function ProductCard({ product }: { product: ProductType }) {
+    const router = useRouter();
     const handleGo = ()=>{
         router.push(`${product.category.name}/${product.id}`)
     }
-    const router = useRouter();
     return (
         <div className='w-[270px] mx-[15px] group transition-all !duration-500'>
             <div className={`bg-[#EBEFF3]  w-full flex justify-center items-center h-[270px] rounded-[6px] overflow-hidden relative `}>

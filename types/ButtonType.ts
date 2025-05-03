@@ -5,6 +5,7 @@ export interface ButtonType {
     iconPosition? : "left" | "right",
     title?: string
     extraStyle?:string
+    loading?:boolean
     onClick?: MouseEventHandler<HTMLButtonElement> 
 }
 

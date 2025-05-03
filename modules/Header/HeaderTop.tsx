@@ -22,10 +22,10 @@ function HeaderTop() {
     <div className={`text-sm py-[10px] ${theme !== 'dark' ? 'bg-[#EBEFF3] ' : 'bg-[#0F172A]'} duration-500 relative z-[1] max-sm:hidden`}>
       <div className='containers flex justify-between items-center'>
         <nav className='flex items-center gap-[28px]'>
-          <Link href={'/location'} className={`flex items-center gap-[10px] duration-300 ${theme === 'light' ? 'text-[#545D6A] hover:text-[#134E9B]' :'text-[#94A3B8] hover:text-[#F8FAFC]'}`}><LocationIcon /> <span>{t('address')}</span></Link>
-          <Link href={'/aboutUS'} className={`${theme === "light" ? 'text-[#545D6A] hover:text-[#134E9B]' : 'text-[#94A3B8] hover:text-[#F8FAFC]'} duration-300 `}> <span>{t('aboutUs')}</span></Link>
-          <Link href={'/products'} className={`${theme === "light" ? 'text-[#545D6A] hover:text-[#134E9B]' : 'text-[#94A3B8] hover:text-[#F8FAFC]'} duration-300`}> <span>{t('contact')}</span></Link>
-          <Link href={'/contacts'} className={`${theme === "light" ? 'text-[#545D6A] hover:text-[#134E9B]' : 'text-[#94A3B8] hover:text-[#F8FAFC]'} duration-300`}> <span>{t('products')}</span></Link>
+          <Link href={'/pages/location'} className={`flex items-center gap-[10px] duration-300 ${theme === 'light' ? 'text-[#545D6A] hover:text-[#134E9B]' :'text-[#94A3B8] hover:text-[#F8FAFC]'}`}><LocationIcon /> <span>{t('address')}</span></Link>
+          <Link href={'/pages/aboutUS'} className={`${theme === "light" ? 'text-[#545D6A] hover:text-[#134E9B]' : 'text-[#94A3B8] hover:text-[#F8FAFC]'} duration-300 `}> <span>{t('aboutUs')}</span></Link>
+          <Link href={'/pages/contacts'} className={`${theme === "light" ? 'text-[#545D6A] hover:text-[#134E9B]' : 'text-[#94A3B8] hover:text-[#F8FAFC]'} duration-300`}> <span>{t('contact')}</span></Link>
+          <Link href={'/pages/products'} className={`${theme === "light" ? 'text-[#545D6A] hover:text-[#134E9B]' : 'text-[#94A3B8] hover:text-[#F8FAFC]'} duration-300`}> <span>{t('products')}</span></Link>
         </nav>
         <div className='flex justify-end items-center gap-[18px]'>
           <Link href={`tel:++998711234567`} className={`${theme === "light" ? 'text-[#545D6A] hover:text-[#134E9B]' : 'text-[#94A3B8] hover:text-[#F8FAFC]'} duration-300`}>+998 (71) 123-45-67</Link>

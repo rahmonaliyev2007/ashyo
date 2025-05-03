@@ -2,7 +2,7 @@ import { ChangeEventHandler, FC, FocusEventHandler } from "react"
 
 export interface HeaderInputType {
     placeholder: string,
-    type: 'text' | 'password' | 'number' | "tel",
+    type: 'text' | 'password' | 'number' | "tel" | "email",
     extraStyle?: string
     value?: string | number
     name? : string

@@ -1,12 +1,6 @@
+import { ModalPropsType } from '@/types/ModalType'
 import { X } from 'lucide-react'
 import React, { FC, ReactNode } from 'react'
-
-interface ModalPropsType {
-    isModalOpen: boolean,
-    setIsModalOpen: React.Dispatch<React.SetStateAction<boolean>>
-    children: ReactNode,
-    title?: string
-}
 
 const Modal: FC<ModalPropsType> = ({ isModalOpen, setIsModalOpen, children , title}) => {
     return (

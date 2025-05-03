@@ -28,7 +28,7 @@ function HeaderActionButtons() {
                     {buttons?.map(item => <HeaderActions key={item.id} title={item.title} icon={item.icon} count={item.count} to={item.to} id={item.id} onClick={item.onClick} extraStyle={'!w-full !justify-start !px-5 hover:bg-[#15509E]/30 duration-300'} />)}
                 </div>
             </div>
-            <Modal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen}><Auth/></Modal>
+            <Modal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen}><Auth setIsModalOpen={setIsModalOpen}/></Modal>
 
         </>
     )
