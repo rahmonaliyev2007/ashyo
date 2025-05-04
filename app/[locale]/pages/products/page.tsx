@@ -20,6 +20,7 @@ import Button from '@/components/Button';
 import Modal from '@/components/Modal';
 import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue, } from "@/components/ui/select"
 import { ThemeContext } from '@/context/ThemeProvider';
+
 function ProductsPage() {
   const searchParams = useSearchParams()
   const router = useRouter()
@@ -71,17 +72,17 @@ function ProductsPage() {
   return (
     <>
       <div className='containers'>
-        <div className='flex gap-3 text-[#B6BABF] text-[14px] font-normal my-[20px] mb-[32px]'><Link href={'/'}>{t('main')}</Link> <span>/</span> <p>{t('products')} </p> <span>/</span></div>
+        <div className='flex gap-3 text-[#B6BABF] text-[14px] font-normal mt-[20px] mb-[32px] max-[680px]:text-[12px] max-[680px]:mb-[20px]'><Link href={'/'}>{t('main')}</Link> <span>/</span> <p className='max-[680px]:text-[#134E9B]'>{t('products')} </p> <span>/</span></div>
         <div className='flex justify-between items-start gap-[21px] max-[680px]:flex-col max-[680px]:gap-[10px]'>
           <div className='flex justify-between gap-[10px] items-center w-full min-[680px]:hidden '>
-            <Button title={t('filter')} onClick={() => setIsModalOpen(true)} iconPosition='right' icon={<FilterIcon />} extraStyle='text-[14px] !py-[11px] !px-[20px] min-[680px]:hidden' />
-            <div className='min-[680px]:hidden py-[5px] w-full flex justify-between bg-[#EBEFF3] ml-[13px] max-[690px]:ml-0 duration-500 rounded-[6px] gap-[10px]'>
+            <Button title={t('filter')} onClick={() => setIsModalOpen(true)} iconPosition='right' icon={<FilterIcon />} extraStyle='text-[14px] !py-[11px] !px-[20px] max-[480px]:text-[12px]' />
+            <div className='min-[680px]:hidden py-[5px] w-full flex justify-between bg-[#EBEFF3] ml-[13px] max-[690px]:ml-0 duration-500 rounded-[6px] max-[480px]:py-[3px]  '>
               <Select value={sort} onValueChange={(e) => { setSort(e) }}>
-                <SelectTrigger className={`${theme === "light" ? 'text-[#545D6A] hover:text-[#134E9B]' : 'text-[#94A3B8] hover:text-[#F8FAFC]'} duration-300 border-none shadow-none`}>
+                <SelectTrigger className={`${theme === "light" ? 'text-[#545D6A] hover:text-[#134E9B] ' : 'text-[#94A3B8] hover:text-[#F8FAFC]'}  duration-300 border-none pr-0 !shadow-none max-[480px]:!text-[12px]`}>
                   <SelectValue defaultValue={sort} placeholder={t('sort')} />
                 </SelectTrigger>
-                <SelectContent className={`relative z-[101] border-none shadow-2xl ${theme === "light" ? 'text-[#545D6A] hover:text-[#134E9B] shadow-black bg-white' : 'text-[#94A3B8] hover:text-[#F8FAFC] shadow-white bg-[#0F172A]'} duration-300`}>
-                  <SelectGroup>
+                <SelectContent className={`relative z-[101]  border-none shadow-2xl ${theme === "light" ? 'text-[#545D6A] hover:text-[#134E9B] shadow-black bg-white' : 'text-[#94A3B8] hover:text-[#F8FAFC] shadow-white bg-[#0F172A]'} duration-300`}>
+                  <SelectGroup className='max-[680px]:p-0'>
                     <SelectItem value="--">{t('sortByDefault')}</SelectItem>
                     <SelectItem value="price_asc">{t('sortByCheapest')}</SelectItem>
                     <SelectItem value="price_desc">{t('sortByExpensive')}</SelectItem>
@@ -90,7 +91,7 @@ function ProductsPage() {
                 </SelectContent>
               </Select>
               <Select value={limit} onValueChange={(e) => { setLimit(e) }}>
-                <SelectTrigger className={`${theme === "light" ? 'text-[#545D6A] hover:text-[#134E9B]' : 'text-[#94A3B8] hover:text-[#F8FAFC]'} duration-300 border-none shadow-none`}>
+                <SelectTrigger className={`${theme === "light" ? 'text-[#545D6A] hover:text-[#134E9B]' : 'text-[#94A3B8] hover:text-[#F8FAFC]'} duration-300 border-none pl-0 !shadow-none max-[480px]:!text-[12px]`}>
                   <SelectValue defaultValue={limit} placeholder={t('pageLimit')} />
                 </SelectTrigger>
                 <SelectContent className={`relative z-[101] border-none shadow-2xl ${theme === "light" ? 'text-[#545D6A] hover:text-[#134E9B] shadow-black bg-white' : 'text-[#94A3B8] hover:text-[#F8FAFC] shadow-white bg-[#0F172A]'} duration-300`}>

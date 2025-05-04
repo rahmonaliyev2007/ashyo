@@ -6,7 +6,7 @@ import FooterRight from './FooterRight'
 export default function Footer() {
   return (
     <footer className='overflow-hidden' >
-      <div className='flex justify-between max-[750px]:flex-col items-start gap-[10px] containers !mt-[130px]'>
+      <div className='flex justify-between max-[750px]:flex-col items-start gap-[10px] containers !mt-[130px] max-[1000px]:!mt-[100px] max-[920px]:!mt-[70px] max-[750px]:!mt-[0px]'>
         <FooterLeft />
         <div className='max-[920px]:hidden'><FooterCenter/></div>
         <div className='max-[920px]:hidden'><FooterRight/></div>

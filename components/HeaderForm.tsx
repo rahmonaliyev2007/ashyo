@@ -1,6 +1,6 @@
 "use client";
 import React, { useContext, useEffect, useState } from "react";
-import { ArrowDownIcon, SearchIcon } from "@/assets/icons";
+import { ArrowDownIcon, Search16Icon, SearchIcon } from "@/assets/icons";
 import HeaderInput from "./HeaderInput";
 import { Context } from "@/context/Context";
 import { instance } from "@/hooks/instance";
@@ -27,9 +27,6 @@ const HeaderForm = () => {
     useEffect(() => {
         if (!debouncedValue) {
             setSearchData([]);
-            const params = new URLSearchParams(searchParams.toString())
-            params.set('search', String(''))
-            router.push(`/pages/products?${params.toString()}`)
             return;
         }
         if (currentValue !== debouncedValue) {
@@ -56,11 +53,14 @@ const HeaderForm = () => {
         router.push(`/pages/products?${params.toString()}`)
     }
     return (
-        <div className="flex items-center gap-[10px] relative">
-            <Button onClick={() => setShowCategory(!showCategory)} title={t('categoryBtn')} icon={<ArrowDownIcon className={`${showCategory ? "rotate-180" : "rotate-0"} duration-500`} />} iconPosition="right" />
+        <div className="flex items-center gap-[10px] relative max-[680px]:gap-[5px]">
+            <Button extraStyle="max-[680px]:py-[12px] max-[680px]:text-[14px] max-[400px]:text-[12px] max-[680px]:px-[20px] max-[680px]:rounded-[3px]" onClick={() => setShowCategory(!showCategory)} title={t('categoryBtn')} icon={<ArrowDownIcon className={`${showCategory ? "rotate-180" : "rotate-0"} duration-500 `} />} iconPosition="right" />
             <div className="xl:w-[520px] w-full relative bg-[#EBEFF3] rounded-[6px]">
-                <HeaderInput value={searchValue} onChange={(e) => setSearchValue(e.target.value)} placeholder={t('placeholder')} type="text" extraStyle="w-full !pr-[65px] z-[30] relative" onFocus={handleFocus} onBlur={handleBlur} />
-                <Button icon={<SearchIcon />} iconPosition="left" onClick={hanldeGoToSearch} extraStyle="!p-0 w-[60px] absolute top-0 right-0 h-full max-h-[64px] z-[50]" />
+                <HeaderInput value={searchValue} onChange={(e) => setSearchValue(e.target.value)} placeholder={t('placeholder')} type="text" extraStyle="w-full !pr-[65px] max-[680px]:!pr-[50px] max-[680px]:pl-[10px] z-[30] relative max-[680px]:py-[12px] max-[680px]:text-[14px] max-[400px]:text-[12px] max-[680px]:px-[20px] max-[680px]:rounded-[3px]" onFocus={handleFocus} onBlur={handleBlur} />
+                <div>
+                <Button icon={<Search16Icon />} iconPosition="left" onClick={hanldeGoToSearch} extraStyle="!p-0 w-[50px] absolute top-0 right-0 h-full max-h-[64px] z-[50] min-[680px]:hidden" />
+                </div>
+                <Button icon={<SearchIcon />} iconPosition="left" onClick={hanldeGoToSearch} extraStyle="!p-0 w-[60px] absolute top-0 right-0 h-full max-h-[64px] z-[50] max-[680px]:hidden" />
                 <div className={`w-full absolute rounded-b-[6px] bg-[#EBEFF3] z-[11] left-0 ${isOpenSearchModal && isLoading || searchData?.length ? 'max-h-[300px] pt-[10px] overflow-y-scroll shadow-lg top-[90%]' : 'h-[0px] pt-[0px] overflow-hidden top-[50%]'} duration-500 bg-[#EBEFF3]`}>
                     {isLoading ? (
                         <div className="w-full text-left border-t-[1px] border-t-[#B6BABF4D]/30 px-[40px] py-[14px]"><div className="h-[25px] loading"></div></div>

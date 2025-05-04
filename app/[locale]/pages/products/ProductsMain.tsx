@@ -7,6 +7,7 @@ import { ThemeContext } from '@/context/ThemeProvider'
 import { useTranslations } from 'next-intl'
 import { useSearchParams } from 'next/navigation'
 import { useRouter } from '@/i18n/navigation'
+import Button from '@/components/Button'
 
 const ProductsMain = ({ products, setPage }: { products: ProductType[], setPage: Dispatch<SetStateAction<string | number>> }) => {
   const searchParams = useSearchParams()
@@ -24,6 +25,12 @@ const ProductsMain = ({ products, setPage }: { products: ProductType[], setPage:
     setPage(1)
     router.push(`?${params.toString()}`)
   }, [sort, limit])
+
+  function clearSearchParams() {
+    const url = new URL(window.location.href);
+    url.search = '';
+    window.history.replaceState({}, '', url);
+  }
 
   return (
     <>
@@ -62,6 +69,11 @@ const ProductsMain = ({ products, setPage }: { products: ProductType[], setPage:
       <div className='grid grid-cols-3 max-[950px]:grid-cols-2 gap-[10px]'>
         {products?.map((product) => (<ProductCard key={product.id} product={product} extraStyle='mb-[30px] max-[1060px]:w-[200px] max-[951px]:w-[250px] max-[680px]:w-[100%]' extraStyleForImg='max-[1060px]:h-[200px] max-[951px]:h-[250px] max-[680px]:h-[300px]' />))}
       </div>
+      {products?.length === 0 && 
+      <div className='m-auto flex justify-center items-center flex-wrap gap-6'>
+        <p>{t('notfoundproduct')}</p>
+        <Button onClick={()=> clearSearchParams()} title='Hammasini tozalash'/>
+        </div>}
     </>
   )
 }

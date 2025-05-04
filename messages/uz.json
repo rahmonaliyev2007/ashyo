@@ -14,6 +14,7 @@
     "placeholder" : "Nima qidiryapsiz?"
   },
   "moreBtn": "Batafsil",
+  "banners":"Bannerlar",
   "mostPopularProducts" : "Eng mashhur mahsulotlar",
   "AboutUs":{
     "about" : {
@@ -83,6 +84,38 @@
     "prev": "Oldingisi",
     "next": "Keyingisi",
     "productsTitle" : "Oxirgi ko’rgan mahsulotlar",
-    "filter": "Saralash"
+    "filter": "Saralash",
+    "notfoundproduct": "Siz tanlagan saralash parametrlari bo‘yicha hech qanday mahsulot topilmadi"
+  },
+  "ContactPage" : {
+    "title" : "Qayta Aloqa",
+    "sub": "Bizning ishimiz haqidagi fikir mulohazalaringiz bilan bo’lishing yoki izohlar maydonida o’zingizni qiziqtirgan savolingizni yo’llang",
+    "name" : "Ism",
+    "surname" : "Familya",
+    "phone" : "Telefon Raqam",
+    "email" : "Elektron Pochta",
+    "fikr" : "O’zingizni fikrlangizni qoldiring",
+    "home":"Bosh sahifa",
+    "pageName":"Qayta aloqa",
+    "send":"Yuborish",
+    "sendMessage": "Fikringiz Telegram bot orqali mas'ullarga yuborildi!"
+  },
+  "SingleProduct": {
+    "home": "Bosh Sahifa",
+    "phoneFeatures" :"Telefon Xususiyatlari",
+    "clientOpinion" : "Mijozlar fikrlari",
+    "lastProductsTitle" : "Oxirgi ko’rgan mahsulotlar",
+    "price": "Narxi",
+    "perMonth" : "Oyiga",
+    "forMonth" :"dan muddatli to'lovga",
+    "truck" : "Yetkazib berish O’zbekiston bo’ylab",
+    "shop" : "Do’kondi o’zidan olib ketishingiz mumkin",
+    "clock" : "Tahminiy yetkazib berish vaqti 1 kundan 3 kungacha...",
+    "addCart": "Savatga qo‘shish",
+    "buy": "Xarid qilish",
+    "color": "Rangini Tanlash",
+    "perMonth2": " Bo‘lib to‘lash ",
+    "forMonth2": "UZSdan"
   }
+
 }

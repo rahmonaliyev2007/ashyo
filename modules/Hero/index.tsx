@@ -11,15 +11,18 @@ import { BannerType } from '@/types/BannerType';
 import { useTranslations } from 'next-intl';
 import Button from '@/components/Button';
 import { API } from '@/hooks/getEnv';
+import { useRouter } from '@/i18n/navigation';
 
 function Hero() {
-    const { data: banners, isLoading, isError } = getBanners();
-
+    const router = useRouter();
+    const { data: banners, isLoading } = getBanners();
     const t = useTranslations();
-
+    const handleGoToSeeBanner = (id:number) =>{
+        router.push(`/${t('banners')}/${id}`)
+    }
     return (
         <div className='bg-[#F3F0F0] mt-[20px]'>
-            <Swiper autoplay={{ delay: 5000, }} loop={true} speed={500} slidesPerView={1} pagination={{ clickable: true }} modules={[Pagination, Navigation, Autoplay]} className="mySwiper">
+            <Swiper autoplay={{ delay: 5000, }} loop={true} speed={500} slidesPerView={1} pagination={{ clickable: true }} modules={[Pagination, Navigation, Autoplay]} className="mySwiper max-[1000px]:!h-[400px] max-[800px]:!h-[300px] max-[500px]:!h-[210px]">
                 {isLoading ? (<SwiperSlide>
                     <div className='containers h-full flex justify-between items-center gap-[20px]'>
                         <div className='w-[55%]'>
@@ -36,13 +39,14 @@ function Hero() {
                 </SwiperSlide>) : (
                     banners?.map((banner: BannerType) => (
                         <SwiperSlide key={banner.id}>
-                            <div className='containers h-full flex justify-between items-center gap-[20px]'>
-                                <div>
-                                    <h2 className='text-[#0A1729] font-black leading-[120%] text-[44px]'>{banner.name}</h2>
-                                    <p className='text-[#545D6A] mt-[6px] mb-[22px]'>{banner.description}</p>
-                                    <Button title={t('moreBtn')} extraStyle='!px-10' />
+                                    <h2 className='text-[#0A1729] font-black leading-[120%] text-xl min-[500px]:hidden line-clamp-1 pl-[10px]'>{banner.name}</h2>
+                            <div className='containers h-full max-[500px]:h-auto flex justify-between items-center gap-[20px]'>
+                                <div className=' max-[800px]:w-[50%]'>
+                                    <h2 className='text-[#0A1729] font-black leading-[120%] text-[44px] max-[1000px]:text-4xl max-[800px]:text-2xl max-[500px]:hidden'>{banner.name}</h2>
+                                    <p className='text-[#545D6A] mt-[6px] mb-[22px] max-[1000px]:text-sm max-[500px]:text-xs line-clamp-3 max-[500px]:mb-[10px]'>{banner.description}</p>
+                                    <Button onClick={()=> handleGoToSeeBanner(banner?.product_id)} title={t('moreBtn')} extraStyle='!px-10 max-[1000px]:text-sm max-[500px]:text-xs max-[500px]:!py-[10px]' />
                                 </div>
-                                <div className='flex justify-end flex-col h-full items-end w-[45%]'>
+                                <div className='flex justify-end flex-col h-full items-end w-[45%] max-[1000px]:w-[40%]'>
                                     <img src={`${API}/uploads/${banner.image}`} alt="ashyo shop ashyo.uz banner img" />
                                 </div>
                             </div>

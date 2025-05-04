@@ -11,9 +11,7 @@ import { useRouter } from '@/i18n/navigation'
 
 function ProductCard({ product , extraStyle, extraStyleForImg}: { product: ProductType,  extraStyle?:string, extraStyleForImg?:string   }) {
     const router = useRouter();
-    const handleGo = ()=>{
-        router.push(`${product.category.name}/${product.id}`)
-    }
+    const handleGo = ()=>{router.push(`${product.id}`)}
     return (
         <div className={`w-[270px] max-[1200px]:w-[250px] max-[901px]:w-[250px] max-[640px]:w-[100%] max-[1100px]:w-[230px] max-[840px]:w-[230px] max-[1000px]:w-[200px] max-[770px]:w-[200px] !mx-[15px] max-[690px]:!mx-0 group transition-all !duration-500 ${extraStyle}`}>
             <div className={`bg-[#EBEFF3]  w-full flex justify-center items-center h-[270px] max-[1200px]:h-[250px] max-[901px]:h-[250px] max-[410px]:h-[200px] max-[1100px]:h-[230px] max-[640px]:h-[250px] max-[840px]:h-[230px] max-[1000px]:h-[200px] max-[770px]:h-[200px] rounded-[6px] overflow-hidden relative ${extraStyleForImg}`}>
@@ -33,8 +31,8 @@ function ProductCard({ product , extraStyle, extraStyleForImg}: { product: Produ
             </div>
             <div className='flex items-end justify-between min-[1100px]:hidden flex-col'>
                 <div onClick={handleGo} className='w-full flex justify-between mb-3'>
-                    <strong className='text-lg font-bold text-[#0A1729] max-[1000px]:text-[14px]'>{formatNumberWithSpaces(product.price)}<span className='text-xs'>uzs</span></strong>
-                    <div className='bg-[#F02C961A] rounded-[3px] text-[#F02C96] py-[3px] px-2.5 text-[14px] max-[1000px]:text-[10px]'>{product.nasiya} / {formatNumberWithSpaces(calculateNasiya(product.price, product.nasiya))}<span className='max-[400px]:hidden'>uzs</span></div>
+                    <strong className='text-lg font-bold text-[#0A1729] max-[1000px]:text-[14px] line-clamp-1'>{formatNumberWithSpaces(product.price)}<span className='text-xs'> uzs</span></strong>
+                    <div className='bg-[#F02C961A] rounded-[3px] text-[#F02C96] py-[3px] px-2.5 line-clamp-1 text-[14px] max-[1000px]:text-[10px]'>{product.nasiya} / {formatNumberWithSpaces(calculateNasiya(product.price, product.nasiya))} <span className='max-[400px]:hidden'>uzs</span></div>
                 </div>
                 <div className='flex items-center justify-between w-full gap-[8px]'>
                     <Button icon={<Compare16Icon />} iconPosition='left' extraStyle='bg-transparent !text-[#545D6A] !border-[#545D6A] h-[50px] !p-0 !w-[50px] max-[1000px]:h-[40px] !min-w-[40px max-[350px]:text-[8px] max-[350px]:h-[30px]' />

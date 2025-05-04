@@ -32,7 +32,7 @@ function Products({ title, api }: { title: string, api: string }) {
 
   return (
     <>
-      <h2 className='font-bold text-[32px] containers !mt-[80px] !mb-[50px]'>{title}</h2>
+      <h2 className='font-bold text-[32px] containers !mt-[80px] max-[1000px]:text-2xl max-[700px]:text-xl max-[800px]:!mt-[30px] max-[800px]:!mb-[20px] !mb-[50px]'>{title}</h2>
       <div className='max-[690px]:hidden'>
       <Slider {...settings}>
         {products?.map((product: ProductType, index: number) => (

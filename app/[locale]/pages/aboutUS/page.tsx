@@ -10,7 +10,7 @@ function AboutUS() {
   return (
     <>
       <div className='containers'>
-        <div className='flex gap-2 text-[#B6BABF] text-[14px] font-normal mt-[20px] mb-[50px]'><Link href={'/'}>{t('about.main')}</Link> / <p>{t('about.title')} / </p></div>
+        <div className='flex gap-3 text-[#B6BABF] text-[14px] max-[600px]:text-[12px] max-[600px]:mb-[8px] font-normal mt-[20px] mb-[22px]'><Link href={'/'}>{t('about.main')}</Link> / <p>{t('about.title')} / </p></div>
         <div className='flex justify-between items-start gap-[32px]'>
           <div className='max-w-[375px] w-full bg-[#EBEFF3] rounded-[6px] max-[900px]:hidden'>
             {['about', 'nasiya', 'paymentMethods', 'delivery', 'garranty', 'help'].map((key) => (

@@ -4,5 +4,6 @@ export interface ModalPropsType {
     isModalOpen?: boolean,
     setIsModalOpen: React.Dispatch<React.SetStateAction<boolean>>
     children?: ReactNode,
-    title?: string
+    title?: string,
+    extraStyle?:string
 }
