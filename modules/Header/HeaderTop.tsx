@@ -3,7 +3,7 @@ import { ArrowDownIcon, LocationIcon } from '@/assets/icons'
 import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 import React, { useContext, useState } from 'react'
-import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue, } from "@/components/ui/select"
+import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue, } from "@/components/ui/select"
 import { usePathname, useRouter } from '@/i18n/navigation'
 import { getCookie } from 'cookies-next'
 import { ThemeContext } from '@/context/ThemeProvider'

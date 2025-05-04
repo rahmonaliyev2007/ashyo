@@ -41,7 +41,7 @@ function Products({ title, api }: { title: string, api: string }) {
       </Slider>
       </div>
       <div className='min-[690px]:hidden grid grid-cols-3 max-[640px]:grid-cols-2 px-2.5 gap-[15px]'>
-      {products?.map((product: ProductType, index: number) => (
+      {products?.slice(0,6)?.map((product: ProductType, index: number) => (
           <ProductCard key={product.id || index} product={product} />
         ))}
       </div>

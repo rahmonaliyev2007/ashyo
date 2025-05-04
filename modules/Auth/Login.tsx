@@ -33,11 +33,11 @@ const Login: FC<AuthPropsTypes> = ({ isLoginOpen, setIsModalOpen }) => {
                 <label className='relative'>
                     <HeaderInput name="email" placeholder='Enter Your Email' type="email" extraStyle={`w-full mt-5 max-[350px]:py-1 max-[350px]:text-[15px] max-[350px]:rounded-[3px] ${errors.email && 'border-red-500 placeholder:text-red-500'}`} value={user.email} onChange={handleChangeValue} />
                 </label>
-                <label>
+                <label className='realtive]'>
                     <HeaderInput name="password" placeholder='Enter your Password' type="password" extraStyle={`w-full mt-5 max-[350px]:py-1 max-[350px]:text-[15px] max-[350px]:rounded-[3px] ${errors.password && 'border-red-500 placeholder:text-red-500'} `} value={user.password} onChange={handleChangeValue} />
                 </label>
                 {errorMsg && (<p className="text-red-500 text-sm mt-4 w-[400px] overflow-hidden">{errorMsg}</p>)}
-                <Button loading={isPending} title='Login' extraStyle='w-full mt-10 max-[350px]:py-1 max-[350px]:text-[15px] max-[350px]:rounded-[3px] ' />
+                <Button loading={isPending} title='Login' extraStyle='w-full mt-[110px] max-[350px]:py-1 max-[350px]:text-[15px] max-[350px]:rounded-[3px] ' />
             </form>
         </div>
 

@@ -61,5 +61,28 @@
       "4": "Mahsulotlarni va tovarlarni qaytarish siyosati",
       "5": "Biz bilan aloqa"
     }
+  },
+  "Products" : {
+    "main": "Bosh Sahifa",
+    "products": "Mahsulotlar",
+    "category":"Kategoriya",
+    "pageLimit":"Bitta Sahifada",
+    "all":"Hammasi",
+    "sort":"Tartiblash",
+    "sortByDefault":"Barchasi",
+    "sortByCheapest":"Arzonroq",
+    "sortByExpensive":"Qimmatroq",
+    "sortByRating":"Eng Mashhur",
+    "price": "Narxi [so'm]" ,
+    "from" : "..dan",
+    "to": "..gacha",
+    "brands": "Brandlar",
+    "ram":"Tezkor xotira RAM",
+    "rom": "Doiymi xotira ROM",
+    "batteryMah": "Akkumulyator hajmi",
+    "prev": "Oldingisi",
+    "next": "Keyingisi",
+    "productsTitle" : "Oxirgi ko’rgan mahsulotlar",
+    "filter": "Saralash"
   }
 }

@@ -13,46 +13,46 @@
     "profile": "Profile",
     "placeholder": "What are you looking for?"
   },
-  "moreBtn": "Read more",
+  "moreBtn": "More",
   "mostPopularProducts": "Most Popular Products",
   "AboutUs": {
     "about": {
       "title": "About Ashyo",
-      "main": "Home",
-      "des": "Ashyo was founded in 2022 in Tashkent city."
+      "main": "Main Page",
+      "des": "Ashyo was established in 2022 in Tashkent."
     },
     "nasiya": {
       "title": "Installment Plan",
-      "des": "Ashyo offers a convenient online payment plan for all electronics and home appliances."
+      "des": "Ashyo offers convenient online payment plans for all electronics."
     },
     "paymentMethods": {
       "title": "Payment Methods",
-      "des": "Pay in a way that's convenient for you: in-store, via Click or Payme."
+      "des": "Pay conveniently in-store, via Click, or Payme."
     },
     "delivery": {
       "title": "Delivery",
-      "des": "Delivery terms and conditions for Ashyo products."
+      "des": "Ashyo delivery terms for products."
     },
     "garranty": {
       "title": "Product Warranty",
-      "des": "Learn everything about warranty and returns at Ashyo online store."
+      "des": "Learn everything about Ashyo's warranty and return policy."
     },
     "help": {
       "title": "Help",
-      "des": "If you don’t understand something, feel free to ask your questions."
+      "des": "If you have any questions, feel free to ask."
     },
     "productsTitle": "Recently Viewed Products",
-    "des1": "Ashyo offers market-priced household appliances and electronics. For over 2 years, we have provided customers with a wide assortment of products and reliable service.",
-    "des2": "Ashyo was established in 2022 in Tashkent. Today, we operate 26 stores across the capital and regions.",
-    "des3": "You can purchase goods in any convenient way: in our retail stores or on the website. An online payment plan is available for household appliances. A passport is required for registration.",
-    "des4": "Legal entities can make purchases via bank transfer without any extra fees."
+    "des1": "Ashyo - market-priced electronics and household appliances. Since its founding, it has been offering a wide range of products and reliable service.",
+    "des2": "Ashyo was established in 2022 in Tashkent. Currently, it operates 26 stores in the capital and regions.",
+    "des3": "You can purchase products through any convenient method: in-store or online. Installment plans are available for appliances. All you need to register is a passport.",
+    "des4": "Legal entities can buy via bank transfer without additional fees."
   },
   "Footer": {
     "downloadApp": "Download the mobile app",
     "contact": "Contact",
     "social": "Follow us on social media",
-    "anyQuestion": "Got a question?",
-    "questionPlaceholder": "Ask any question you're interested in",
+    "anyQuestion": "Have a question?",
+    "questionPlaceholder": "Ask the questions you're curious about",
     "footerLinks": {
       "menu": "Menu",
       "1": "About Ashyo",
@@ -61,5 +61,24 @@
       "4": "Product Return Policy",
       "5": "Contact Us"
     }
+  },
+  "Products": {
+    "main": "Main Page",
+    "products": "Products",
+    "category": "Category",
+    "pageLimit": "Per Page",
+    "all": "All",
+    "sort": "Sort",
+    "sortByDefault": "All",
+    "sortByCheapest": "Cheapest",
+    "sortByExpensive": "Most Expensive",
+    "sortByRating": "Most Popular",
+    "price": "Price [UZS]",
+    "from": "From",
+    "to": "To",
+    "brands": "Brands",
+    "ram": "RAM",
+    "rom": "ROM",
+    "batteryMah": "Battery Capacity"
   }
 }
