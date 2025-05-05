@@ -1,4 +1,11 @@
 {
+  "moreBtn": "Batafsil",
+  "onSale": "Chegirmada",
+  "productsOnSale": "Chegirmadagi mahsulotlar",
+  "banners":"Bannerlar",
+  "mostPopularProducts" : "Eng mashhur mahsulotlar",
+  "adTitle":"Musiqa zavqini his qilish uchun ko'p mablag' sarflash shart emas!",
+
   "HeaderTop": {
     "address": "Toshkent",
     "aboutUs": "Biz haqimizda",
@@ -14,13 +21,26 @@
     "placeholder" : "Nima qidiryapsiz?",
     "owner":"Abdulaziz tayyorlagan bu appni"
   },
-  "moreBtn": "Batafsil",
-  "onSale": "Chegirmada",
-  "productsOnSale": "Chegirmadagi mahsulotlar",
-  "banners":"Bannerlar",
-  "mostPopularProducts" : "Eng mashhur mahsulotlar",
-  "adTitle":"Musiqa zavqini his qilish uchun ko'p mablag' sarflash shart emas!",
+  "Auth": {
+    "login": "Kirish",
+    "register": "Ro'yxatdan o'tish",
+    "forgot": "Parolni unutdingizmi?",
+    "remember": "Qayta kirish",
+    "loginBtn": "Kirish",
+    "registerBtn": "Ro'yxatdan o'tish",
+    "forgotBtn": "Parolni unutdingizmi?",
+    "rememberBtn": "Qayta kirish",
+    "fullNamePl" : "To'liq ismingizni kiriting",
+    "emailPl" : "Elektron pochtingizni kiriting",
+    "passwordPl" : "Parolingizni kiriting"
+  },
+  
   "AboutUs":{
+    "productsTitle" : "Oxirgi ko’rilgan mahsulotlar",
+    "des1": "Ashyo - bozor narhid maishy texnika va electronics dukonlari qurilmalari. 2 oydan davomid mizhozlarga keng assortimentdagi mahsulotlarni, kafolatli va benson hizmatni taklif etib keladi.",
+    "des2": "Ashyo 2022 yilda Toshkent shahrida tashkil etylgan. Bugungi kunga qadar jami poytaxtda va viloyatlarda 26 that dukon faoliyat ko'rsatmoqda.",
+    "des3":"Siz tovarlarni har kanday kulay usulda sotib olishingiz mumkin: tarmoq dukonlarida yoki website. Maishy uchun texnikasi onlayn b'lib t'lov rezhashi mavjud. Ruyhatdan utish uchun zarur bulgan huzhzhat - bu pasport.",
+    "des4": "Yuridik shahslar uchun pul o'tkazish yo'li bilan, eng muximi - qo'shimcha to'lovlarsiz sotib olish mumkin.",
     "about" : {
       "title" : "Ashyo haqida",
       "main" : "Bosh Sahifa",
@@ -45,28 +65,9 @@
     "help" : {
       "title": "Yordam",
       "des": "Tushumagan narsalaringiz bo’lsa savollaringizni bering."
-    }, 
-    "productsTitle" : "Oxirgi ko’rilgan mahsulotlar",
-    "des1": "Ashyo - bozor narhid maishy texnika va electronics dukonlari qurilmalari. 2 oydan davomid mizhozlarga keng assortimentdagi mahsulotlarni, kafolatli va benson hizmatni taklif etib keladi.",
-    "des2": "Ashyo 2022 yilda Toshkent shahrida tashkil etylgan. Bugungi kunga qadar jami poytaxtda va viloyatlarda 26 that dukon faoliyat ko'rsatmoqda.",
-    "des3":"Siz tovarlarni har kanday kulay usulda sotib olishingiz mumkin: tarmoq dukonlarida yoki website. Maishy uchun texnikasi onlayn b'lib t'lov rezhashi mavjud. Ruyhatdan utish uchun zarur bulgan huzhzhat - bu pasport.",
-    "des4": "Yuridik shahslar uchun pul o'tkazish yo'li bilan, eng muximi - qo'shimcha to'lovlarsiz sotib olish mumkin."
-  },
-  "Footer": {
-    "downloadApp" : "Mobil ilovani yuklab oling",
-    "contact":"Aloqa",
-    "social": "Bizning ijtimoiy tarmoqlarda",
-    "anyQuestion" : "Savolingiz bormi?",
-    "questionPlaceholder" : "O’zingiz qiziqtirgan savollarni bering",
-    "footerLinks": {
-      "menu": "Menyu",
-      "1" :"Ashyo haqida",
-      "2": "Foydalanish shartlari",
-      "3": "Maxfiylik va hafsizlik siyosati",
-      "4": "Mahsulotlarni va tovarlarni qaytarish siyosati",
-      "5": "Biz bilan aloqa"
     }
-  },
+},
+  
   "Products" : {
     "main": "Bosh Sahifa",
     "products": "Mahsulotlar",
@@ -91,19 +92,6 @@
     "filter": "Saralash",
     "notfoundproduct": "Siz tanlagan saralash parametrlari bo‘yicha hech qanday mahsulot topilmadi"
   },
-  "ContactPage" : {
-    "title" : "Qayta Aloqa",
-    "sub": "Bizning ishimiz haqidagi fikir mulohazalaringiz bilan bo’lishing yoki izohlar maydonida o’zingizni qiziqtirgan savolingizni yo’llang",
-    "name" : "Ism",
-    "surname" : "Familya",
-    "phone" : "Telefon Raqam",
-    "email" : "Elektron Pochta",
-    "fikr" : "O’zingizni fikrlangizni qoldiring",
-    "home":"Bosh sahifa",
-    "pageName":"Qayta aloqa",
-    "send":"Yuborish",
-    "sendMessage": "Fikringiz Telegram bot orqali mas'ullarga yuborildi!"
-  },
   "SingleProduct": {
     "home": "Bosh Sahifa",
     "phoneFeatures" :"Telefon Xususiyatlari",
@@ -120,6 +108,33 @@
     "color": "Rangini Tanlash",
     "perMonth2": " Bo‘lib to‘lash ",
     "forMonth2": "UZSdan"
+  },
+  "ContactPage" : {
+    "title" : "Qayta Aloqa",
+    "sub": "Bizning ishimiz haqidagi fikir mulohazalaringiz bilan bo’lishing yoki izohlar maydonida o’zingizni qiziqtirgan savolingizni yo’llang",
+    "name" : "Ism",
+    "surname" : "Familya",
+    "phone" : "Telefon Raqam",
+    "email" : "Elektron Pochta",
+    "fikr" : "O’zingizni fikrlangizni qoldiring",
+    "home":"Bosh sahifa",
+    "pageName":"Qayta aloqa",
+    "send":"Yuborish",
+    "sendMessage": "Fikringiz Telegram bot orqali mas'ullarga yuborildi!"
+  },
+  "Footer": {
+    "downloadApp" : "Mobil ilovani yuklab oling",
+    "contact":"Aloqa",
+    "social": "Bizning ijtimoiy tarmoqlarda",
+    "anyQuestion" : "Savolingiz bormi?",
+    "questionPlaceholder" : "O’zingiz qiziqtirgan savollarni bering",
+    "footerLinks": {
+      "menu": "Menyu",
+      "1" :"Ashyo haqida",
+      "2": "Foydalanish shartlari",
+      "3": "Maxfiylik va hafsizlik siyosati",
+      "4": "Mahsulotlarni va tovarlarni qaytarish siyosati",
+      "5": "Biz bilan aloqa"
+    }
   }
-
 }

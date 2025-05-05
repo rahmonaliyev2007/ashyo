@@ -19,7 +19,6 @@ export default function SingleProduct() {
   const { data: product, isLoading } = getSingleProduct(productId)
   const t = useTranslations("SingleProduct")
   const { data:variations } = getProductVariations(productId);
-  console.log(variations);
   
   const nmadrla = [{ icon: <TruckIcon />, title: t('truck') }, { icon: <ShopIcon />, title: t('shop') }, { icon: <ClockIcon />, title: t('clock') }]
   // realna miyyamga kemadi nima nom berish
@@ -48,7 +47,7 @@ export default function SingleProduct() {
           
         </div>
         <div className=' w-full'>
-            <div className={`w-full max-w-[500px] flex bg-gray-50 rounded p-2 relative z-0 justify-between mt-[80px] mb-[10px]`}>
+            <div className={`w-full max-w-[600px] flex bg-gray-50 rounded p-2 relative z-0 justify-between mt-[80px] mb-[10px]`}>
               <button onClick={() => setIsVariationsOpen(true)} className={` cursor-pointer z-[2] rounded-sm p-2 px-5 w-[49%] duration-75 ${isVariationsOpen ? '' : 'hover:bg-gray-100'} max-[700px]:text-sm max-[500px]:text-xs`}>{t('phoneFeatures')}</button>
               <button onClick={() => setIsVariationsOpen(false)} className={` cursor-pointer z-[2] rounded-sm p-2 px-5 w-[49%] duration-75 ${isVariationsOpen && 'hover:bg-gray-100'} max-[700px]:text-sm max-[500px]:text-xs`}>{t('clientOpinion')}</button>
               <div className={`absolute top-2 bg-gray-200 rounded-sm w-[48%] h-[40px] max-[700px]:h-[35px] max-[500px]:h-[31px] transition-all duration-300 z-[1]`} style={{ left: isVariationsOpen ? '0.5rem' : 'calc(100% - 0.5rem - 47.8%)' }}></div>

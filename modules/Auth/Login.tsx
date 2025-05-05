@@ -3,6 +3,7 @@ import Button from '@/components/Button';
 import HeaderInput from '@/components/HeaderInput';
 import { postAuth } from '@/service/postAuth';
 import { AuthPropsTypes, ErrorType, LoginUserType } from '@/types/AuthType';
+import { useTranslations } from 'next-intl';
 import React, { FC, useState } from 'react'
 
 const Login: FC<AuthPropsTypes> = ({ isLoginOpen, setIsModalOpen }) => {
@@ -10,6 +11,7 @@ const Login: FC<AuthPropsTypes> = ({ isLoginOpen, setIsModalOpen }) => {
     const [errors, setErrors] = useState<ErrorType>({ email: false, password: false });
     const [errorMsg, setErrorMsg] = useState('');
     const { mutate, isPending } = postAuth('/auth/login');
+    const t = useTranslations('Auth');
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -31,13 +33,13 @@ const Login: FC<AuthPropsTypes> = ({ isLoginOpen, setIsModalOpen }) => {
         <div className={`transition-all duration-300 overflow-hidden ${isLoginOpen ? 'w-full' : 'w-0'}`}>
             <form onSubmit={handleSubmit}>
                 <label className='relative'>
-                    <HeaderInput name="email" placeholder='Enter Your Email' type="email" extraStyle={`w-full mt-5 max-[350px]:py-1 max-[350px]:text-[15px] max-[350px]:rounded-[3px] ${errors.email && 'border-red-500 placeholder:text-red-500'}`} value={user.email} onChange={handleChangeValue} />
+                    <HeaderInput name="email" placeholder={t('emailPl')} type="email" extraStyle={`w-full mt-5 max-[350px]:py-1 max-[350px]:text-[15px] max-[350px]:rounded-[3px] ${errors.email && 'border-red-500 placeholder:text-red-500'}`} value={user.email} onChange={handleChangeValue} />
                 </label>
                 <label className='realtive]'>
-                    <HeaderInput name="password" placeholder='Enter your Password' type="password" extraStyle={`w-full mt-5 max-[350px]:py-1 max-[350px]:text-[15px] max-[350px]:rounded-[3px] ${errors.password && 'border-red-500 placeholder:text-red-500'} `} value={user.password} onChange={handleChangeValue} />
+                    <HeaderInput name="password" placeholder={t('passwordPl')} type="password" extraStyle={`w-full mt-5 max-[350px]:py-1 max-[350px]:text-[15px] max-[350px]:rounded-[3px] ${errors.password && 'border-red-500 placeholder:text-red-500'} `} value={user.password} onChange={handleChangeValue} />
                 </label>
                 {errorMsg && (<p className="text-red-500 text-sm mt-4 w-[400px] overflow-hidden">{errorMsg}</p>)}
-                <Button loading={isPending} title='Login' extraStyle='w-full mt-[110px] max-[350px]:py-1 max-[350px]:text-[15px] max-[350px]:rounded-[3px] ' />
+                <Button loading={isPending} title={t('loginBtn')} extraStyle='w-full mt-[114px] max-[350px]:py-1 max-[350px]:text-[15px] max-[350px]:rounded-[3px] ' />
             </form>
         </div>
 

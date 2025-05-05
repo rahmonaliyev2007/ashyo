@@ -1,4 +1,11 @@
 {
+  "moreBtn": "More",
+  "onSale": "On Sale",
+  "productsOnSale": "Products on Sale",
+  "banners": "Banners",
+  "mostPopularProducts": "Most Popular Products",
+  "adTitle": "No need to spend a lot to enjoy the music!",
+
   "HeaderTop": {
     "address": "Tashkent",
     "aboutUs": "About Us",
@@ -12,27 +19,40 @@
     "cart": "Cart",
     "profile": "Profile",
     "placeholder": "What are you looking for?",
-    "owner": "This app was made by Abdulaziz"
+    "owner": "This app was developed by Abdulaziz"
   },
-  "moreBtn": "More",
-  "onSale": "On Sale",
-  "productsOnSale": "Products on Sale",
-  "banners": "Banners",
-  "mostPopularProducts": "Most Popular Products",
-  "adTitle": "Feel the joy of music without spending too much!",
+  "Auth": {
+    "login": "Login",
+    "register": "Register",
+    "forgot": "Forgot Password?",
+    "remember": "Remember Me",
+    "loginBtn": "Login",
+    "registerBtn": "Register",
+    "forgotBtn": "Forgot Password?",
+    "rememberBtn": "Remember Me",
+    "fullNamePl": "Enter your full name",
+    "emailPl": "Enter your email",
+    "passwordPl": "Enter your password"
+  },
+
   "AboutUs": {
+    "productsTitle": "Recently viewed products",
+    "des1": "Ashyo - market-priced home appliances and electronics stores. For over 2 months, we have been offering a wide range of products with warranty and excellent service.",
+    "des2": "Ashyo was founded in 2022 in Tashkent. Currently, there are 26 stores operating in the capital and regions.",
+    "des3": "You can purchase products in any convenient way: in network stores or online. Installment plans are available for household appliances. All you need to register is your passport.",
+    "des4": "Legal entities can purchase via bank transfer without any extra fees.",
     "about": {
       "title": "About Ashyo",
       "main": "Home",
       "des": "Ashyo was established in 2022 in Tashkent."
     },
     "nasiya": {
-      "title": "Installments",
-      "des": "Ashyo offers a convenient online payment plan for all household appliances."
+      "title": "Installment Plan",
+      "des": "Ashyo offers convenient online payment plans for all electronics and home appliances"
     },
     "paymentMethods": {
       "title": "Payment Methods",
-      "des": "Pay in a convenient way: in-store, through Click or Payme."
+      "des": "Pay in a convenient way: in-store, via Click, or Payme."
     },
     "delivery": {
       "title": "Delivery",
@@ -40,33 +60,14 @@
     },
     "garranty": {
       "title": "Product Warranty",
-      "des": "Learn everything about Ashyo's warranty and return policy."
+      "des": "Learn everything about the warranty and return policy of Ashyo online store."
     },
     "help": {
       "title": "Help",
-      "des": "If you have questions, feel free to ask."
-    },
-    "productsTitle": "Recently Viewed Products",
-    "des1": "Ashyo is a chain of electronics and household goods stores at market prices, offering a wide range of products and excellent service for over 2 months.",
-    "des2": "Ashyo was established in 2022 in Tashkent. Today, it operates 26 stores across the capital and regions.",
-    "des3": "You can purchase products through any convenient method: in-store or online. Installment plans are available. You only need a passport to register.",
-    "des4": "For legal entities, bank transfer payment is available without additional fees."
-  },
-  "Footer": {
-    "downloadApp": "Download the App",
-    "contact": "Contact",
-    "social": "Find us on social media",
-    "anyQuestion": "Have a question?",
-    "questionPlaceholder": "Ask your question here",
-    "footerLinks": {
-      "menu": "Menu",
-      "1": "About Ashyo",
-      "2": "Terms of Use",
-      "3": "Privacy and Security Policy",
-      "4": "Return Policy",
-      "5": "Contact Us"
+      "des": "If anything is unclear, feel free to ask questions."
     }
   },
+
   "Products": {
     "main": "Home",
     "products": "Products",
@@ -87,38 +88,56 @@
     "batteryMah": "Battery Capacity",
     "prev": "Previous",
     "next": "Next",
-    "productsTitle": "Recently Viewed Products",
+    "productsTitle": "Recently viewed products",
     "filter": "Filter",
-    "notfoundproduct": "No products found for the selected filters"
+    "notfoundproduct": "No products found based on your selected filters"
   },
-  "ContactPage": {
-    "title": "Contact Us",
-    "sub": "Share your feedback about our service or ask any questions below.",
-    "name": "Name",
-    "surname": "Surname",
-    "phone": "Phone Number",
-    "email": "Email",
-    "fikr": "Leave your comment",
-    "home": "Home",
-    "pageName": "Contact",
-    "send": "Send",
-    "sendMessage": "Your feedback has been sent to our Telegram bot!"
-  },
+
   "SingleProduct": {
     "home": "Home",
     "phoneFeatures": "Phone Features",
     "clientOpinion": "Customer Reviews",
-    "lastProductsTitle": "Recently Viewed Products",
+    "lastProductsTitle": "Recently viewed products",
     "price": "Price",
-    "perMonth": "Per month",
-    "forMonth": "Installment from",
+    "perMonth": "Per Month",
+    "forMonth": "from on installment",
     "truck": "Delivery across Uzbekistan",
-    "shop": "Pickup available at store",
-    "clock": "Estimated delivery time: 1–3 days",
-    "addCart": "Add to cart",
-    "buy": "Buy now",
-    "color": "Choose color",
-    "perMonth2": " Installment ",
+    "shop": "Can be picked up from the store",
+    "clock": "Estimated delivery time: 1 to 3 days...",
+    "addCart": "Add to Cart",
+    "buy": "Buy Now",
+    "color": "Select Color",
+    "perMonth2": "Installment",
     "forMonth2": "from UZS"
+  },
+
+  "ContactPage": {
+    "title": "Contact Us",
+    "sub": "Share your thoughts about our service or ask your questions in the comment section",
+    "name": "First Name",
+    "surname": "Last Name",
+    "phone": "Phone Number",
+    "email": "Email",
+    "fikr": "Leave your feedback",
+    "home": "Home",
+    "pageName": "Contact Us",
+    "send": "Send",
+    "sendMessage": "Your message has been sent to our team via Telegram bot!"
+  },
+
+  "Footer": {
+    "downloadApp": "Download the App",
+    "contact": "Contact",
+    "social": "Follow us on social media",
+    "anyQuestion": "Have a question?",
+    "questionPlaceholder": "Ask your questions here",
+    "footerLinks": {
+      "menu": "Menu",
+      "1": "About Ashyo",
+      "2": "Terms of Use",
+      "3": "Privacy and Security Policy",
+      "4": "Product Return Policy",
+      "5": "Contact Us"
+    }
   }
 }

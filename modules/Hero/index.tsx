@@ -18,7 +18,7 @@ function Hero() {
     const { data: banners, isLoading } = getBanners();
     const t = useTranslations();
     const handleGoToSeeBanner = (id:number) =>{
-        router.push(`/${t('banners')}/${id}`)
+        router.push(`/pages/${id}`)
     }
     return (
         <div className='bg-[#F3F0F0] mt-[20px]'>
