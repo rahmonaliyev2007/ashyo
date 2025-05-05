@@ -8,15 +8,18 @@ import React from 'react'
 import Button from '../Button'
 import { ShoppingBag} from 'lucide-react'
 import { useRouter } from '@/i18n/navigation'
+import { useTranslations } from 'next-intl'
 
-function ProductCard({ product , extraStyle, extraStyleForImg}: { product: ProductType,  extraStyle?:string, extraStyleForImg?:string   }) {
+function ProductCard({ product , extraStyle, extraStyleForImg}: { product: ProductType,  extraStyle?:string, extraStyleForImg?:string}) {
     const router = useRouter();
-    const handleGo = ()=>{router.push(`${product.id}`)}
+    const t = useTranslations();
+    const handleGo = ()=>{router.push(`/pages/${product.id}`)}
     return (
         <div className={`w-[270px] max-[1200px]:w-[250px] max-[901px]:w-[250px] max-[640px]:w-[100%] max-[1100px]:w-[230px] max-[840px]:w-[230px] max-[1000px]:w-[200px] max-[770px]:w-[200px] !mx-[15px] max-[690px]:!mx-0 group transition-all !duration-500 ${extraStyle}`}>
             <div className={`bg-[#EBEFF3]  w-full flex justify-center items-center h-[270px] max-[1200px]:h-[250px] max-[901px]:h-[250px] max-[410px]:h-[200px] max-[1100px]:h-[230px] max-[640px]:h-[250px] max-[840px]:h-[230px] max-[1000px]:h-[200px] max-[770px]:h-[200px] rounded-[6px] overflow-hidden relative ${extraStyleForImg}`}>
                 <Image onClick={handleGo} src={`${API}/uploads/${product.image}`} alt={product.name} width={202} height={202} className='w-[80%] h-auto group-hover:scale-[1.1] duration-300 cursor-pointer' ></Image>
                 <button className='absolute top-5 right-5 text-gray-500 text-[25px] cursor-pointer'><HeartOutline24Icon /></button>
+                {product.is_aksiya && <span className='absolute top-2 left-2 font-semibold text-[#E81504] max-[700px]:text-xs max-[700px]:top-[16px] max-[600px]:py-[5px] max-[600px]:px-[7px]  max-[500px]:text-[10px] py-[7px] text-[14px] px-[10px] rounded-[5px] bg-white'>{t('onSale')}</span> }
             </div>
             <p  onClick={handleGo} className=' line-clamp-2 text-[14px] text-[#545D6A] mt-[16px] mb-[28px] max-[1000px]:mb-[17px] max-[520px]:text-[12px]'>{product.description}</p>
             <div className='flex items-end justify-between max-[1100px]:hidden'>

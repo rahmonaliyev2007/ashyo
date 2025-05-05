@@ -15,7 +15,7 @@ function HeaderActionButtons() {
     const router = useRouter();
     const handleGoProfile = ()=>{
        const token = getCookie('NEXT_TOKEN') || null
-       if(token)router.push('pages/profile')
+       if(token)router.push('/pages/profile')
         else setIsModalOpen(true)
 
    }

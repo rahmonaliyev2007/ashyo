@@ -141,6 +141,20 @@
     }
 }
 
+@media screen and (max-width:800px) {
+    .custom-grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(7, 50px);
+        grid-template-areas:
+            'artel huawei nokia '
+            'artel huawei nokia '
+            'mi huawei apple '
+            'mi vivo apple '
+            'samsung vivo apple '
+            'samsung vivo koproq '
+        ;
+    }
+}
 
 @media screen and (max-width:490px) {
     .custom-grid {

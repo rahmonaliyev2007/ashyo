@@ -9,9 +9,10 @@ import ProductCard from './ProductCard';
 import { ProductType } from '@/types/ProductType';
 import { ThemeContext } from '@/context/ThemeProvider';
 
-function Products({ title, api }: { title: string, api: string }) {
+function Products({ title, api, aksiya }: { title: string, api: string, aksiya?: boolean }) {
   const { data: products, isLoading, isError } = getProducts(api);
   const { theme } = useContext(ThemeContext);
+
 
   if (isLoading || isError) {
     return (
@@ -34,16 +35,17 @@ function Products({ title, api }: { title: string, api: string }) {
     <>
       <h2 className='font-bold text-[32px] containers !mt-[80px] max-[1000px]:text-2xl max-[700px]:text-xl max-[800px]:!mt-[30px] max-[800px]:!mb-[20px] !mb-[50px]'>{title}</h2>
       <div className='max-[690px]:hidden'>
-      <Slider {...settings}>
-        {products?.map((product: ProductType, index: number) => (
-          <ProductCard key={product.id || index} product={product} />
-        ))}
-      </Slider>
+        <Slider {...settings}>
+          {products?.filter((product: ProductType) => (aksiya ? product.is_aksiya : true)).map((product: ProductType, index: number) => (
+            <ProductCard key={product.id || index} product={product} />
+          ))}
+        </Slider>
       </div>
       <div className='min-[690px]:hidden grid grid-cols-3 max-[640px]:grid-cols-2 px-2.5 gap-[15px]'>
-      {products?.slice(0,6)?.map((product: ProductType, index: number) => (
-          <ProductCard key={product.id || index} product={product} />
-        ))}
+        {products?.filter((product: ProductType) => (aksiya ? product.is_aksiya : true)).slice(0, 6)
+          .map((product: ProductType, index: number) => (
+            <ProductCard key={product.id || index} product={product} />
+          ))}
       </div>
     </>
   );

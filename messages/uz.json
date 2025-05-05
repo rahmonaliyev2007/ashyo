@@ -11,11 +11,15 @@
     "wishlist": "Istaklar ro'yxati",
     "cart": "Savatcha",
     "profile": "Profil",
-    "placeholder" : "Nima qidiryapsiz?"
+    "placeholder" : "Nima qidiryapsiz?",
+    "owner":"Abdulaziz tayyorlagan bu appni"
   },
   "moreBtn": "Batafsil",
+  "onSale": "Chegirmada",
+  "productsOnSale": "Chegirmadagi mahsulotlar",
   "banners":"Bannerlar",
   "mostPopularProducts" : "Eng mashhur mahsulotlar",
+  "adTitle":"Musiqa zavqini his qilish uchun ko'p mablag' sarflash shart emas!",
   "AboutUs":{
     "about" : {
       "title" : "Ashyo haqida",

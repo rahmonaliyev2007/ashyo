@@ -1,4 +1,5 @@
 import Products from "@/components/Products/Products";
+import Ad from "@/modules/Ad";
 import Brands from "@/modules/Brands";
 import CategoryBrands from "@/modules/CategoryBrands";
 import Hero from "@/modules/Hero";
@@ -14,6 +15,8 @@ export default function Home() {
     <div className='max-[690px]:hidden'><Products title={t('mostPopularProducts')} api="products"/></div>
     <div className='max-[690px]:hidden'><Products title={t('mostPopularProducts')} api="products"/></div>
     <CategoryBrands/>
+    <Ad/>
+    <Products title={t('productsOnSale')} api="products" aksiya={true}/>
     </>
   );
 }
