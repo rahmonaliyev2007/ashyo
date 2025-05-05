@@ -11,46 +11,51 @@
     "wishlist": "Wishlist",
     "cart": "Cart",
     "profile": "Profile",
-    "placeholder": "What are you looking for?"
+    "placeholder": "What are you looking for?",
+    "owner": "This app was made by Abdulaziz"
   },
-  "moreBtn": "Read more",
+  "moreBtn": "More",
+  "onSale": "On Sale",
+  "productsOnSale": "Products on Sale",
+  "banners": "Banners",
   "mostPopularProducts": "Most Popular Products",
+  "adTitle": "Feel the joy of music without spending too much!",
   "AboutUs": {
     "about": {
       "title": "About Ashyo",
       "main": "Home",
-      "des": "Ashyo was founded in 2022 in Tashkent."
+      "des": "Ashyo was established in 2022 in Tashkent."
     },
     "nasiya": {
-      "title": "Installment Payment",
-      "des": "Ashyo offers convenient online installment plans for all electronics and household appliances."
+      "title": "Installments",
+      "des": "Ashyo offers a convenient online payment plan for all household appliances."
     },
     "paymentMethods": {
       "title": "Payment Methods",
-      "des": "Pay conveniently via store, Click, or Payme."
+      "des": "Pay in a convenient way: in-store, through Click or Payme."
     },
     "delivery": {
       "title": "Delivery",
-      "des": "Terms of product delivery at Ashyo."
+      "des": "Ashyo delivery terms and conditions."
     },
     "garranty": {
       "title": "Product Warranty",
-      "des": "Learn everything about Ashyo's online store warranty and return policy."
+      "des": "Learn everything about Ashyo's warranty and return policy."
     },
     "help": {
       "title": "Help",
-      "des": "If you have any questions, feel free to ask."
+      "des": "If you have questions, feel free to ask."
     },
     "productsTitle": "Recently Viewed Products",
-    "des1": "Ashyo - market-priced home appliances and electronics store. For over 2 years, we’ve offered customers a wide range of guaranteed and high-quality products.",
-    "des2": "Ashyo was established in 2022 in Tashkent. Currently, 26 stores operate in the capital and regions.",
-    "des3": "You can purchase products in any convenient way: in-store or online. Online installment plans are available. A passport is required to register.",
-    "des4": "For legal entities, payments can be made via bank transfer without additional charges."
+    "des1": "Ashyo is a chain of electronics and household goods stores at market prices, offering a wide range of products and excellent service for over 2 months.",
+    "des2": "Ashyo was established in 2022 in Tashkent. Today, it operates 26 stores across the capital and regions.",
+    "des3": "You can purchase products through any convenient method: in-store or online. Installment plans are available. You only need a passport to register.",
+    "des4": "For legal entities, bank transfer payment is available without additional fees."
   },
   "Footer": {
-    "downloadApp": "Download the mobile app",
+    "downloadApp": "Download the App",
     "contact": "Contact",
-    "social": "Our social networks",
+    "social": "Find us on social media",
     "anyQuestion": "Have a question?",
     "questionPlaceholder": "Ask your question here",
     "footerLinks": {
@@ -58,7 +63,7 @@
       "1": "About Ashyo",
       "2": "Terms of Use",
       "3": "Privacy and Security Policy",
-      "4": "Product Return Policy",
+      "4": "Return Policy",
       "5": "Contact Us"
     }
   },
@@ -68,8 +73,8 @@
     "category": "Category",
     "pageLimit": "Per Page",
     "all": "All",
-    "sort": "Sort by",
-    "sortByDefault": "All",
+    "sort": "Sort",
+    "sortByDefault": "Default",
     "sortByCheapest": "Cheapest",
     "sortByExpensive": "Most Expensive",
     "sortByRating": "Most Popular",
@@ -84,6 +89,36 @@
     "next": "Next",
     "productsTitle": "Recently Viewed Products",
     "filter": "Filter",
-    "notfoundproduct": "No products found with the selected filter options"
+    "notfoundproduct": "No products found for the selected filters"
+  },
+  "ContactPage": {
+    "title": "Contact Us",
+    "sub": "Share your feedback about our service or ask any questions below.",
+    "name": "Name",
+    "surname": "Surname",
+    "phone": "Phone Number",
+    "email": "Email",
+    "fikr": "Leave your comment",
+    "home": "Home",
+    "pageName": "Contact",
+    "send": "Send",
+    "sendMessage": "Your feedback has been sent to our Telegram bot!"
+  },
+  "SingleProduct": {
+    "home": "Home",
+    "phoneFeatures": "Phone Features",
+    "clientOpinion": "Customer Reviews",
+    "lastProductsTitle": "Recently Viewed Products",
+    "price": "Price",
+    "perMonth": "Per month",
+    "forMonth": "Installment from",
+    "truck": "Delivery across Uzbekistan",
+    "shop": "Pickup available at store",
+    "clock": "Estimated delivery time: 1–3 days",
+    "addCart": "Add to cart",
+    "buy": "Buy now",
+    "color": "Choose color",
+    "perMonth2": " Installment ",
+    "forMonth2": "from UZS"
   }
 }
