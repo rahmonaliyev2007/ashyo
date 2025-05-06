@@ -2,7 +2,7 @@
 import React from 'react'
 import productParams from '../ProductParametrs';
 import { useTranslations } from 'next-intl';
-import { PaginationFc } from '../SetParams/productsParams';
+import { PaginationFc } from './productsPagination';
 
 function ProductsPagination({totalPages}: {totalPages:number}) {
     const { page} = productParams();

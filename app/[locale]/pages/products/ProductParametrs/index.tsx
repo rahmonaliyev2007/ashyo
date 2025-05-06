@@ -15,12 +15,12 @@ const productParams = () => {
 
     const [sort, setSort] = useState(searchParams.get('sort') || '')
     const [limit, setLimit] = useState(searchParams.get('limit') || '8')
-    const [page, setPage] = useState(1)
     const [price, setPrice] = useState([0, 50000])
     const brand_id = searchParams.get('brand') || '';
     const category_id = searchParams.get('category') || '';
     const debouncedPrice = debounce(price, 1100)
-
+    const page = searchParams.get('page') || 1
+    
     const clearSearchParams = () => {
         const url = new URL(window.location.href)
         url.search = ''
@@ -31,8 +31,7 @@ const productParams = () => {
         const params = new URLSearchParams(searchParams.toString())
         sort === '--' ? params.delete('sort') : params.set('sort', String(sort))
         params.set('limit', String(limit))
-        params.set('page', String(page))
-        setPage(1)
+        page === 1 ? params.delete('page') : params.set('page', String(page))
         router.push(`?${params.toString()}`)
     }, [sort, limit, page])
 
@@ -40,12 +39,9 @@ const productParams = () => {
         const params = new URLSearchParams(searchParams.toString())
         if (price[0] === 0) params.delete('min')
         else params.set('min', String(price[0]))
-
         if (price[1] === 50000) params.delete('max')
         else params.set('max', String(price[1]))
-
-        params.set('page', String(1))
-        setPage(1)
+        params.set('page', String(page))
         router.push(`?${params.toString()}`)
     }, [debouncedPrice])
 
@@ -57,7 +53,6 @@ const productParams = () => {
             params.set('brand', String(id))
         }
         params.set('page', String(1))
-        setPage(1)
         router.push(`?${params.toString()}`)
     }
 
@@ -69,14 +64,13 @@ const productParams = () => {
             params.set('category', String(id))
         }
         params.set('page', String(1))
-        setPage(1)
         router.push(`?${params.toString()}`)
     }
 
     return {
         sort, setSort,
         limit, setLimit,
-        page, setPage,
+        page,
         price, setPrice,
         brand_id, brands, categories, category_id,
         clearSearchParams, BrandParams, CategoryParams
