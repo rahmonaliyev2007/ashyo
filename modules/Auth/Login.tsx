@@ -42,7 +42,6 @@ const Login: FC<AuthPropsTypes> = ({ isLoginOpen, setIsModalOpen }) => {
                 <Button loading={isPending} title={t('loginBtn')} extraStyle='w-full mt-[114px] max-[350px]:py-1 max-[350px]:text-[15px] max-[350px]:rounded-[3px] ' />
             </form>
         </div>
-
     )
 }
 

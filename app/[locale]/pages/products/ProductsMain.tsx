@@ -1,15 +1,16 @@
 "use client"
 import ProductCard from '@/components/Products/ProductCard'
-import { ProductType } from '@/types/ProductType'
-import React, { Dispatch, FC, SetStateAction, useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue, } from "@/components/ui/select"
 import { ThemeContext } from '@/context/ThemeProvider'
 import { useTranslations } from 'next-intl'
 import { useSearchParams } from 'next/navigation'
 import { useRouter } from '@/i18n/navigation'
 import Button from '@/components/Button'
+import { ProductsMainType } from '@/types/ProductsMainType'
+import LoadingPorducts from './LoadingPorducts'
 
-const ProductsMain = ({ products, setPage }: { products: ProductType[], setPage: Dispatch<SetStateAction<string | number>> }) => {
+const ProductsMain = ({ products, setPage, isError, isLoading, isFetching }: ProductsMainType ) => {
   const searchParams = useSearchParams()
   const router = useRouter()
   const [sort, setSort] = useState(searchParams.get('sort') || '')
@@ -31,6 +32,8 @@ const ProductsMain = ({ products, setPage }: { products: ProductType[], setPage:
     url.search = '';
     window.history.replaceState({}, '', url);
   }
+
+  if(isLoading || isFetching || isError) return <LoadingPorducts/>
 
   return (
     <>

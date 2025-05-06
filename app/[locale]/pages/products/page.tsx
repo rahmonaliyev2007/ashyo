@@ -29,7 +29,7 @@ function ProductsPage() {
   const [price, setPrice] = useState<[number, number]>([parseInt(searchParams.get('min') ?? '0') || 0, parseInt(searchParams.get('max') ?? '50000') || 50000])
   const brand_id = searchParams.get('brand') || '';
   const category_id = searchParams.get('category') || '';
-  const { data: products } = getCustomProducts();
+  const { data: products, isLoading, isFetching, isError } = getCustomProducts();
   const { data: brands } = getBrands()
   const { data: categories } = getCategories()
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false)
@@ -130,7 +130,7 @@ function ProductsPage() {
             <ProductVariations />
           </div>
           <div className='w-[100%]'>
-            <ProductsMain products={products.items} setPage={setPage} />
+            <ProductsMain products={products.items} setPage={setPage} isError={isError} isLoading={isLoading} isFetching={isFetching} />
           </div>
         </div>
         <div className={`flex justify-center gap-2 mt-8 flex-wrap ${products?.totalPages === 1 && 'hidden'}`}>

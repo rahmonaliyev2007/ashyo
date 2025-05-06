@@ -16,18 +16,22 @@ function Products({ title, api, aksiya }: { title: string, api: string, aksiya?:
 
   if (isLoading || isError) {
     return (
-      <div className={`m-auto py-4 ${theme === 'dark' ? 'bg-[#333]' : 'bg-white'} `}>
-        <h2 className={`text-4xl max-co font-bold !my-11 containers ${theme === 'dark' ? 'text-white' : 'text-black'} `}>{title}</h2>
+      <>
+      <div className='containers'>
+        <h2 className='font-bold text-[32px] !max-w-[600px] !m-0 h-[40px] loading !mt-[80px] max-[800px]:!mt-[30px] max-[800px]:!mb-[20px] !mb-[50px]'></h2>
+        </div>
+      <div className={`m-auto py-4 `}>
         <Slider {...settings} autoplay={false}>
           {[...Array(5)].map((_, index) => (
             <div key={index} className="p-2">
-              <div className="w-full h-[400px] bg-gray-200 flex justify-center items-center text-blue-500/20 skeleton rounded-lg loading">
-                {isLoading ? 'Yuklanmoqda...' : 'Yuklashda xatolik yuz berdi'}
-              </div>
+              <div className="w-full h-[300px] rounded-lg loading"></div>
+              <div className='w-full h-[17px] loading mt-[15px]'></div>
+              <div className='w-[80%] h-[17px] loading mt-[5px]'></div>
             </div>
           ))}
         </Slider>
       </div>
+      </>
     );
   }
 

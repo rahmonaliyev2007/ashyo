@@ -1,4 +1,3 @@
-
 export const handlePrev = (page: number | string, searchParams: URLSearchParams, router: any, setPage: (value: number) => void) => {
     const newPage = Math.max(Number(page) - 1, 1);
     const params = new URLSearchParams(searchParams.toString());
