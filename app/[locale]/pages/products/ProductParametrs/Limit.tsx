@@ -17,7 +17,7 @@ function LimitComponent() {
                 <SelectGroup>
                     <SelectItem value="--">{t('all')}</SelectItem>
                     <SelectItem value="6">6</SelectItem>
-                    <SelectItem value="8">8</SelectItem>
+                    <SelectItem value="9">9</SelectItem>
                     <SelectItem value="12">12</SelectItem>
                     <SelectItem value="16">16</SelectItem>
                     <SelectItem value="24">24</SelectItem>

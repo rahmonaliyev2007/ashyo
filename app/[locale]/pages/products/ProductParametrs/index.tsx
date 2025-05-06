@@ -14,7 +14,7 @@ const productParams = () => {
     const { data: categories } = getCategories()
 
     const [sort, setSort] = useState(searchParams.get('sort') || '')
-    const [limit, setLimit] = useState(searchParams.get('limit') || '8')
+    const [limit, setLimit] = useState(searchParams.get('limit') || '9')
     const [price, setPrice] = useState([0, 50000])
     const brand_id = searchParams.get('brand') || '';
     const category_id = searchParams.get('category') || '';

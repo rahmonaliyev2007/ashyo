@@ -11,7 +11,7 @@ export const getCustomProducts = () => {
     const min_price = searchParams.get('min') || '';
     const max_price = searchParams.get('max') || '';
     const page = searchParams.get('page') || '';
-    const limit = searchParams.get('limit') || '8';
+    const limit = searchParams.get('limit') || '9';
     const category_id = searchParams.get('category') || '';
     
     const { data = [], isLoading, isFetching, isError } = useQuery({
