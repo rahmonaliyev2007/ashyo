@@ -1,6 +1,7 @@
 "use client"
 import Button from '@/components/Button'
 import HeaderInput from '@/components/HeaderInput'
+import { tg_token } from '@/hooks/getEnv'
 import { Link } from '@/i18n/navigation'
 import { useTranslations } from 'next-intl'
 import React, { useState } from 'react'
@@ -24,7 +25,7 @@ function ContactsPage() {
     if (!isValid) return;
 
     try {
-      await fetch(`https://api.telegram.org/bot7696673947:AAEj2CAlIWe-9IHkHNKbM-D1UUwPNpCmKwA/sendMessage`, {
+      await fetch(`https://api.telegram.org/${tg_token}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
