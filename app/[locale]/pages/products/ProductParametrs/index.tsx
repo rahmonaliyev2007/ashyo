@@ -20,7 +20,7 @@ const productParams = () => {
     const category_id = searchParams.get('category') || '';
     const debouncedPrice = debounce(price, 1100)
     const page = searchParams.get('page') || 1
-    
+
     const clearSearchParams = () => {
         const url = new URL(window.location.href)
         url.search = ''
@@ -32,18 +32,18 @@ const productParams = () => {
         sort === '--' ? params.delete('sort') : params.set('sort', String(sort))
         params.set('limit', String(limit))
         page === 1 ? params.delete('page') : params.set('page', String(page))
+        price[0] === 0 ? params.delete('min') : params.set('min', String(price[0]))
+        price[1] === 50000 ? params.delete('max') : params.set('max', String(price[1]))
         router.push(`?${params.toString()}`)
-    }, [sort, limit, page])
+    }, [sort, limit, page, debouncedPrice])
 
-    useEffect(() => {
-        const params = new URLSearchParams(searchParams.toString())
-        if (price[0] === 0) params.delete('min')
-        else params.set('min', String(price[0]))
-        if (price[1] === 50000) params.delete('max')
-        else params.set('max', String(price[1]))
-        params.set('page', String(page))
-        router.push(`?${params.toString()}`)
-    }, [debouncedPrice])
+    // useEffect(() => {
+    //     const params = new URLSearchParams(searchParams.toString())
+    //     price[0] === 0 ? params.delete('min') : params.set('min', String(price[0]))
+    //     price[1] === 50000 ? params.delete('max') : params.set('max', String(price[1]))
+    //     params.set('page', String(page))
+    //     router.push(`?${params.toString()}`)
+    // }, [debouncedPrice])
 
     const BrandParams = (id: number | string) => {
         const params = new URLSearchParams(searchParams.toString())
