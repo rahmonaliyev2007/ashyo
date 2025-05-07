@@ -1,11 +1,14 @@
-import React from 'react'
+"use client"
+import React, { useContext } from 'react'
 import { FooterLeft } from './FooterLeft'
 import FooterCenter from './FooterCenter'
 import FooterRight from './FooterRight'
+import { ThemeContext } from '@/context/ThemeProvider'
 
 export default function Footer() {
+  const {theme} = useContext(ThemeContext)
   return (
-    <footer className='overflow-hidden' >
+    <footer className={`${theme === 'dark' && 'bg-[#313131] '} overflow-hidden`} >
       <div className='flex justify-between max-[750px]:flex-col items-start gap-[10px] containers !mt-[130px] max-[1000px]:!mt-[100px] max-[920px]:!mt-[70px] max-[750px]:!mt-[0px]'>
         <FooterLeft />
         <div className='max-[920px]:hidden'><FooterCenter/></div>

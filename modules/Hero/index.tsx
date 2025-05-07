@@ -16,7 +16,7 @@ import { ThemeContext } from '@/context/ThemeProvider';
 
 function Hero() {
     const router = useRouter();
-    const { data: banners, isLoading } = getBanners();
+    const { data: banners, isLoading , isError} = getBanners();
     const t = useTranslations();
     const handleGoToSeeBanner = (id: number) => {
         router.push(`/pages/${id}`)
@@ -26,16 +26,16 @@ function Hero() {
         <div className={`pt-[20px] ${theme === "dark" && 'bg-[#313131]'} duration-500`}>
             <div className={` ${theme === 'dark' ? 'bg-[#525252]' : 'bg-[#F3F0F0]'} duration-500`}>
                 <Swiper autoplay={{ delay: 5000, }} loop={true} speed={500} slidesPerView={1} pagination={{ clickable: true }} modules={[Pagination, Navigation, Autoplay]} className="mySwiper max-[1000px]:!h-[400px] max-[800px]:!h-[300px] max-[500px]:!h-[210px]">
-                    {isLoading ? (<SwiperSlide>
+                    {isLoading || isError ? (<SwiperSlide>
                         <div className='containers h-full flex justify-between items-center gap-[20px]'>
                             <div className='w-[55%]'>
                                 <h2 className='h-[34px] w-[90%] mb-[15px] text-[44px] loading '></h2>
                                 <h2 className='h-[34px] w-[50%] text-[44px] loading '></h2>
-                                <p className=']mb-[6px] mt-[20px] w-[98%] h-[17px] loading'></p>
-                                <p className=']mt-[6px] mb-[30px] w-[50%] h-[17px] loading'></p>
+                                <p className='mb-[6px] mt-[20px] w-[98%] h-[17px] loading'></p>
+                                <p className='mt-[6px] mb-[30px] w-[50%] h-[17px] loading'></p>
                                 <div className='loading w-[137px] h-[55px] '></div>
                             </div>
-                            <div className='w-[45%]'>
+                            <div className='w-[45%] flex justify-end items-center h-full'>
                                 <div className='w-[80%] h-[80%] loading'></div>
                             </div>
                         </div>

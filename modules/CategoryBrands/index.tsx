@@ -6,8 +6,10 @@ import React from 'react'
 import './styles.css'
 import { useRouter } from '@/i18n/navigation';
 function CategoryBrands() {
-    const {data:brandCategories} = getCategories();
+    const {data:brandCategories, isLoading, isError} = getCategories();
   const router = useRouter();
+
+  if(isLoading || isError) return
   return (
     <div className='containers brandCategory_wrapper '>
         {brandCategories?.slice(0, -1).map((brandCategory:HeaderCategoriesType, i:number)=>(
