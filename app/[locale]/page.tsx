@@ -11,6 +11,7 @@ import { useContext } from "react";
 export default function Home() {
   const t = useTranslations()
   const {theme} = useContext(ThemeContext)
+  
   return (
     <div className={`${theme === 'dark' && 'bg-[#313131]'}`}>
     <Hero/>
