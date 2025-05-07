@@ -6,7 +6,7 @@ import { formatNumberWithSpaces } from '@/hooks/formatNumberwithSpace';
 import { API } from '@/hooks/getEnv';
 import { Link } from '@/i18n/navigation';
 import { getSingleProduct } from '@/service/getSingleProduct';
-import { getProductVariations } from '@/service/getVariations';
+import { getProductVariations } from '@/service/getProductVariations';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';

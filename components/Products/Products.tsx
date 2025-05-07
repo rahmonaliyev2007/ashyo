@@ -37,8 +37,8 @@ function Products({ title, api, aksiya }: { title: string, api: string, aksiya?:
 
   return (
     <>
-      <h2 className='font-bold text-[32px] containers !mt-[80px] max-[1000px]:text-2xl max-[700px]:text-xl max-[800px]:!mt-[30px] max-[800px]:!mb-[20px] !mb-[50px]'>{title}</h2>
-      <div className='max-[690px]:hidden'>
+      <h2 className={`font-bold text-[32px] ${theme === 'dark' ? 'text-[#F1F1F1]' : 'text-black'} containers !mt-[80px] max-[1000px]:text-2xl max-[700px]:text-xl max-[800px]:!mt-[30px] max-[800px]:!mb-[20px] !mb-[50px]`}>{title}</h2>
+     <div className='max-[690px]:hidden'>
         <Slider {...settings}>
           {products?.filter((product: ProductType) => (aksiya ? product.is_aksiya : true)).map((product: ProductType, index: number) => (
             <ProductCard key={product.id || index} product={product} />

@@ -19,21 +19,21 @@ function HeaderTop() {
     return (cookieLang === 'ru' || cookieLang === 'en' || cookieLang === 'uz') ? cookieLang : 'uz';
   });  
   return (
-    <div className={`text-sm py-[10px] ${theme !== 'dark' ? 'bg-[#EBEFF3] ' : 'bg-[#0F172A]'} duration-500 relative z-[1] max-sm:hidden`}>
+    <div className={`text-sm py-[10px] ${theme !== 'dark' ? 'bg-[#EBEFF3] ' : 'bg-[#414141]'} duration-500 relative z-[1] max-sm:hidden`}>
       <div className='containers flex justify-between items-center'>
         <nav className='flex items-center gap-[28px]'>
-          <Link href={'/pages/location'} className={`flex items-center gap-[10px] duration-300 ${theme === 'light' ? 'text-[#545D6A] hover:text-[#134E9B]' :'text-[#94A3B8] hover:text-[#F8FAFC]'}`}><LocationIcon /> <span>{t('address')}</span></Link>
-          <Link href={'/pages/aboutUS'} className={`${theme === "light" ? 'text-[#545D6A] hover:text-[#134E9B]' : 'text-[#94A3B8] hover:text-[#F8FAFC]'} duration-300 `}> <span>{t('aboutUs')}</span></Link>
-          <Link href={'/pages/contacts'} className={`${theme === "light" ? 'text-[#545D6A] hover:text-[#134E9B]' : 'text-[#94A3B8] hover:text-[#F8FAFC]'} duration-300`}> <span>{t('contact')}</span></Link>
-          <Link href={'/pages/products'} className={`${theme === "light" ? 'text-[#545D6A] hover:text-[#134E9B]' : 'text-[#94A3B8] hover:text-[#F8FAFC]'} duration-300`}> <span>{t('products')}</span></Link>
+          <Link href={'/pages/location'} className={`flex items-center gap-[10px] duration-300 ${theme === 'light' ? 'text-[#545D6A] hover:text-[#134E9B]' :'text-[#929599] hover:text-[#F8FAFC]'}`}><LocationIcon /> <span>{t('address')}</span></Link>
+          <Link href={'/pages/aboutUS'} className={`${theme === "light" ? 'text-[#545D6A] hover:text-[#134E9B]' : 'text-[#929599] hover:text-[#F8FAFC]'} duration-300 `}> <span>{t('aboutUs')}</span></Link>
+          <Link href={'/pages/contacts'} className={`${theme === "light" ? 'text-[#545D6A] hover:text-[#134E9B]' : 'text-[#929599] hover:text-[#F8FAFC]'} duration-300`}> <span>{t('contact')}</span></Link>
+          <Link href={'/pages/products'} className={`${theme === "light" ? 'text-[#545D6A] hover:text-[#134E9B]' : 'text-[#929599] hover:text-[#F8FAFC]'} duration-300`}> <span>{t('products')}</span></Link>
         </nav>
         <div className='flex justify-end items-center gap-[18px]'>
-          <Link href={`tel:++998711234567`} className={`${theme === "light" ? 'text-[#545D6A] hover:text-[#134E9B]' : 'text-[#94A3B8] hover:text-[#F8FAFC]'} duration-300`}>+998 (71) 123-45-67</Link>
+          <Link href={`tel:++998711234567`} className={`${theme === "light" ? 'text-[#545D6A] hover:text-[#134E9B]' : 'text-[#929599] hover:text-[#F8FAFC]'} duration-300`}>+998 (71) 123-45-67</Link>
           <Select value={lang} onValueChange={(e) => { setLang(e); router.push(pathname, { locale: e }); }}>
-            <SelectTrigger className={`${theme === "light" ? 'text-[#545D6A] hover:text-[#134E9B]' : 'text-[#94A3B8] hover:text-[#F8FAFC]'} duration-300 border-none shadow-none`}>
+            <SelectTrigger className={`${theme === "light" ? 'text-[#545D6A] hover:text-[#134E9B]' : 'text-[#929599] hover:text-[#F8FAFC]'} duration-300 border-none shadow-none`}>
               <SelectValue defaultValue={lang} placeholder="Select a language" />
             </SelectTrigger>
-            <SelectContent className={`relative z-[101] border-none shadow-2xl ${theme === "light" ? 'text-[#545D6A] hover:text-[#134E9B] shadow-black bg-white' : 'text-[#94A3B8] hover:text-[#F8FAFC] shadow-white bg-[#0F172A]'} duration-300`}>
+            <SelectContent className={`relative z-[101] border-none shadow-2xl ${theme === "light" ? 'text-[#545D6A] hover:text-[#134E9B] shadow-black bg-white' : 'text-[#929599] hover:text-[#F8FAFC] shadow-white bg-[#0F172A]'} duration-300`}>
               <SelectGroup>
                 <SelectItem value="uz">uz</SelectItem>
                 <SelectItem value="ru">ru</SelectItem>
@@ -41,7 +41,7 @@ function HeaderTop() {
               </SelectGroup>
             </SelectContent>
           </Select>
-          <button onClick={toggleTheme} className={`relative h-[30px] w-[30px] ${theme === "light" ? 'text-[#545D6A] hover:text-[#134E9B]' : 'text-[#94A3B8] hover:text-[#F8FAFC]'} `}><Sun size={16} className={`${theme === 'dark' && 'opacity-0'} duration-300 absolute top-[50%] -translate-y-[50%] left-[50%] -translate-x-[50%]`}/> <Moon size={16} className={`${theme === 'light' && 'opacity-0'} duration-300 absolute top-[50%] -translate-y-[50%] left-[50%] -translate-x-[50%]`}/> </button>
+          <button onClick={toggleTheme} className={`relative h-[30px] w-[30px] ${theme === "light" ? 'text-[#545D6A] hover:text-[#134E9B]' : 'text-[#929599] hover:text-[#F8FAFC]'} `}><Sun size={16} className={`${theme === 'dark' && 'opacity-0'} duration-300 absolute top-[50%] -translate-y-[50%] left-[50%] -translate-x-[50%]`}/> <Moon size={16} className={`${theme === 'light' && 'opacity-0'} duration-300 absolute top-[50%] -translate-y-[50%] left-[50%] -translate-x-[50%]`}/> </button>
         </div>
       </div>
     </div>
