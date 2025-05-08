@@ -2,23 +2,24 @@
 import { useEffect, useState } from 'react'
 import { useRouter } from '@/i18n/navigation'
 import { useSearchParams } from 'next/navigation'
-import debounce from '@/hooks/debounse'
+import useDebounce from '@/hooks/debounse'
 import { getBrands } from '@/service/getBrands'
 import { getCategories } from '@/service/getCategories'
 
 const productParams = () => {
     const searchParams = useSearchParams()
     const router = useRouter()
+    const params = new URLSearchParams(searchParams.toString())
 
     const { data: brands } = getBrands()
     const { data: categories } = getCategories()
 
-    const [sort, setSort] = useState(searchParams.get('sort') || '')
-    const [limit, setLimit] = useState(searchParams.get('limit') || '9')
-    const [price, setPrice] = useState([parseInt(searchParams.get('min') || '0', 10),parseInt(searchParams.get('max') || '50000', 10)])
+    const sort = searchParams.get('sort') || '--'
+    const limit = searchParams.get('limit') || '9'
+    const [price, setPrice] = useState([parseInt(searchParams.get('min') || '0', 10), parseInt(searchParams.get('max') || '50000', 10)])
     const brand_id = searchParams.get('brand') || '';
     const category_id = searchParams.get('category') || '';
-    const debouncedPrice = debounce(price, 1100)
+    const debouncedPrice = useDebounce(price, 1100)
     const page = searchParams.get('page') || 1
 
     const clearSearchParams = () => {
@@ -27,26 +28,43 @@ const productParams = () => {
         window.history.replaceState({}, '', url)
     }
 
-    useEffect(() => {
-        const params = new URLSearchParams(searchParams.toString())
-        sort === '--' ? params.delete('sort') : params.set('sort', String(sort))
-        params.set('limit', String(limit))
-        page === 1 ? params.delete('page') : params.set('page', String(page))
+    useEffect(()=>{
         price[0] === 0 ? params.delete('min') : params.set('min', String(price[0]))
         price[1] === 50000 ? params.delete('max') : params.set('max', String(price[1]))
         router.push(`?${params.toString()}`)
-    }, [sort, limit, page, debouncedPrice])
+        params.set('page', String(1))
+        console.log('price ishladi');
+    },[debouncedPrice])
 
-    // useEffect(() => {
-    //     const params = new URLSearchParams(searchParams.toString())
-    //     price[0] === 0 ? params.delete('min') : params.set('min', String(price[0]))
-    //     price[1] === 50000 ? params.delete('max') : params.set('max', String(price[1]))
-    //     params.set('page', String(page))
-    //     router.push(`?${params.toString()}`)
-    // }, [debouncedPrice])
+    // const PriceParams = (min: number, max: number) => {
+    //     useEffect(()=>{
+    //         const delay = setTimeout(() => {
+    //             min === 0 ? params.delete('min') : params.set('min', String(min))
+    //             max === 50000 ? params.delete('max') : params.set('max', String(max))
+    //             params.set('page', String(1))
+    //             router.push(`?${params.toString()}`)
+    //         }, 500);
+    //         return () => clearTimeout(delay);
+    //     },[price])
+    // }
+
+    const LimitParams = (id: number | string) => {
+        params.set('limit', String(id))
+        params.set('page', String(1))
+        router.push(`?${params.toString()}`)
+    }
+
+    const SortParams = (id: number | string) => {
+        if (id === '') {
+            params.delete('sort')
+        } else {
+            params.set('sort', String(id))
+        }
+        params.set('page', String(1))
+        router.push(`?${params.toString()}`)
+    }
 
     const BrandParams = (id: number | string) => {
-        const params = new URLSearchParams(searchParams.toString())
         if (id === '') {
             params.delete('brand')
         } else {
@@ -57,7 +75,6 @@ const productParams = () => {
     }
 
     const CategoryParams = (id: number | string) => {
-        const params = new URLSearchParams(searchParams.toString())
         if (id === '') {
             params.delete('category')
         } else {
@@ -65,11 +82,13 @@ const productParams = () => {
         }
         params.set('page', String(1))
         router.push(`?${params.toString()}`)
+        console.log('category ishladi');
+
     }
 
     return {
-        sort, setSort,
-        limit, setLimit,
+        sort, SortParams,
+        limit, LimitParams,
         page,
         price, setPrice,
         brand_id, brands, categories, category_id,

@@ -7,10 +7,10 @@ import { useContext } from "react"
 
 function SortComponent() {
     const t = useTranslations("Products")
-    const { sort, setSort } = productParams()
+    const { sort, SortParams} = productParams()
     const { theme } = useContext(ThemeContext);
     return (
-        <Select value={sort} onValueChange={(e) => { setSort(e) }}>
+        <Select value={sort} onValueChange={(e) => { SortParams(e) }}>
             <SelectTrigger className={`${theme === "light" ? 'text-[#545D6A] hover:text-[#134E9B] ' : 'text-[#94A3B8] hover:text-[#F8FAFC]'}  duration-300 border-none pr-0 !shadow-none max-[480px]:!text-[12px]`}>
                 <SelectValue defaultValue={sort} placeholder={t('sort')} />
             </SelectTrigger>

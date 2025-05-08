@@ -10,6 +10,7 @@ function PriceComponent({ mobile, setIsModalOpen }: { mobile?: boolean, setIsMod
     const { price, setPrice, categories, brands, BrandParams, CategoryParams, brand_id, category_id } = productParams();
     const t = useTranslations("Products");
 
+    
     return (
         <div className={`${mobile && 'w-full bg-[#EBEFF3] p-[18px] rounded-[8px]'}`}>
             <h3 className='text-[16px] font-medium mb-[15px]'>{t('price')}</h3>
@@ -17,7 +18,7 @@ function PriceComponent({ mobile, setIsModalOpen }: { mobile?: boolean, setIsMod
                 <div className='w-full flex flex-col'><span className='text-[12px] text-[#00000066] mb-[6px]'>{t('from')}</span><div className='w-full rounded-[5px] bg-[#FFFFFF] text-[14px] p-2'>{formatNumberWithSpaces(price[0])} uzs</div></div>
                 <div className='w-full flex flex-col'><span className='text-[12px] text-[#00000066] mb-[6px]'>{t('to')}</span><div className='w-full rounded-[5px] bg-[#FFFFFF] text-[14px] p-2'>{formatNumberWithSpaces(price[1])} uzs</div></div>
             </div>
-            <RadixSlider.Root className="relative flex w-full touch-none select-none items-center h-5 my-[26px]" min={0} max={50000} step={10} value={price} onValueChange={(value) => setPrice([value[0], value[1]])}>
+            <RadixSlider.Root className="relative flex w-full touch-none select-none items-center h-5 my-[26px]" min={0} max={50000} step={10} value={price} onValueChange={(value) => {setPrice([value[0], value[1]])}}>
                 <RadixSlider.Track className="relative h-[3px] w-full grow rounded-full bg-gray-300">
                     <RadixSlider.Range className="absolute h-full bg-[#15509E] rounded-full" />
                 </RadixSlider.Track>
