@@ -15,7 +15,7 @@ const productParams = () => {
 
     const [sort, setSort] = useState(searchParams.get('sort') || '')
     const [limit, setLimit] = useState(searchParams.get('limit') || '9')
-    const [price, setPrice] = useState([0, 50000])
+    const [price, setPrice] = useState([parseInt(searchParams.get('min') || '0', 10),parseInt(searchParams.get('max') || '50000', 10)])
     const brand_id = searchParams.get('brand') || '';
     const category_id = searchParams.get('category') || '';
     const debouncedPrice = debounce(price, 1100)

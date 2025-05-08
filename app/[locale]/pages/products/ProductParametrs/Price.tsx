@@ -10,7 +10,6 @@ function PriceComponent({ mobile, setIsModalOpen }: { mobile?: boolean, setIsMod
     const { price, setPrice, categories, brands, BrandParams, CategoryParams, brand_id, category_id } = productParams();
     const t = useTranslations("Products");
 
-
     return (
         <div className={`${mobile && 'w-full bg-[#EBEFF3] p-[18px] rounded-[8px]'}`}>
             <h3 className='text-[16px] font-medium mb-[15px]'>{t('price')}</h3>
